@@ -1,0 +1,108 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+/*Theme*/
+#themeIcon {
+	display: inline-block;
+	font-size: 30px;
+	transition: transform 0.3s ease;
+}
+#themeIcon.rotate {
+	transform: translateY(100%);
+}
+.themeModify {
+	position: relative;
+	overflow-y: hidden;
+}
+
+/*Modal de description*/
+.modal-fixed-height {
+	height: 80vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-fixed-height img {
+	max-height: 78vh;
+	object-fit: content;
+}
+
+.technologie {
+	border-top: 1px solid #C0C0F2;
+}
+
+.card-footer .btn {
+	height: fit-content;
+}
+
+.footer {
+	margin-top: 1em;
+	padding: 1em;
+}
+
+/*Animation au défilement*/
+.fade-in {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/*Couleur*/
+body {
+	background-color: rgb(176 197 247 / 56%);
+}
+
+.navbar {
+	background: rgb(116, 180, 212);
+}
+
+
+.card:not(.project-card) {
+	box-shadow: -0.1em 0.1em 5px 2px #C0C0C0;
+}
+
+.card-header {
+	background-color: #0AA1C880;
+}
+
+.card-body:not(.c-b-projet) {
+	background-color: #FCFAEE80;
+}
+
+.project-card {
+	background-color: #4441;
+}
+
+.modal-body {
+	background-color: #C0C0C080;
+}
+
+.list-group {
+	box-shadow: -0.1em 0.1em 5px 2px #C0C0C0;
+}
+
+.list-group-item {
+	background-color: #FCFAEE50;
+}
+
+#contact {
+	background: rgb(22 138 173 / 50%);
+}
+
+/*Colors with Dark mode*/
+[data-bs-theme="dark"] .navbar {
+	background-color: rgb(64 129 160);
+}
+
+[data-bs-theme="dark"] input, [data-bs-theme="dark"] textarea{
+	background-color: #C0C0C080;
+}
