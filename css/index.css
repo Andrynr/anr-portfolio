@@ -1,108 +1,114 @@
-html, body {
-	margin: 0;
-	padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /*Theme*/
 #themeIcon {
-	display: inline-block;
-	font-size: 30px;
-	transition: transform 0.3s ease;
+  display: inline-block;
+  font-size: 30px;
+  transition: transform 0.3s ease;
 }
 #themeIcon.rotate {
-	transform: translateY(100%);
+  transform: translateY(100%);
 }
 .themeModify {
-	position: relative;
-	overflow-y: hidden;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.c-b-projet,
+.project-card {
+  height: 100%;
 }
 
 /*Modal de description*/
 .modal-fixed-height {
-	height: 80vh;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-fixed-height img {
-	max-height: 78vh;
-	object-fit: content;
+  max-height: 78vh;
+  object-fit: content;
 }
 
 .technologie {
-	border-top: 1px solid #C0C0F2;
+  border-top: 1px solid #c0c0f2;
 }
 
 .card-footer .btn {
-	height: fit-content;
+  height: fit-content;
 }
 
 .footer {
-	margin-top: 1em;
-	padding: 1em;
+  margin-top: 1em;
+  padding: 1em;
 }
 
 /*Animation au défilement*/
 .fade-in {
-	opacity: 0;
-	transform: translateY(30px);
-	transition: opacity 0.6s ease-out, transform 1s ease-out;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 1s ease-out;
 }
 
 .fade-in.visible {
-	opacity: 1;
-	transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*Couleur*/
 body {
-	background-color: rgb(176 197 247 / 56%);
+  background-color: rgb(176 197 247 / 56%);
 }
 
 .navbar {
-	background: rgb(116, 180, 212);
+  background: rgb(116, 180, 212);
 }
 
-
 .card:not(.project-card) {
-	box-shadow: -0.1em 0.1em 5px 2px #C0C0C0;
+  box-shadow: -0.1em 0.1em 5px 2px #c0c0c0;
 }
 
 .card-header {
-	background-color: #0AA1C880;
+  background-color: #0aa1c880;
 }
 
 .card-body:not(.c-b-projet) {
-	background-color: #FCFAEE80;
+  background-color: #fcfaee80;
 }
 
 .project-card {
-	background-color: #4441;
+  background-color: #4441;
 }
 
 .modal-body {
-	background-color: #C0C0C080;
+  background-color: #c0c0c080;
 }
 
 .list-group {
-	box-shadow: -0.1em 0.1em 5px 2px #C0C0C0;
+  box-shadow: -0.1em 0.1em 5px 2px #c0c0c0;
 }
 
 .list-group-item {
-	background-color: #FCFAEE50;
+  background-color: #fcfaee50;
 }
 
 #contact {
-	background: rgb(22 138 173 / 50%);
+  background: rgb(22 138 173 / 50%);
 }
 
 /*Colors with Dark mode*/
 [data-bs-theme="dark"] .navbar {
-	background-color: rgb(64 129 160);
+  background-color: rgb(64 129 160);
 }
 
-[data-bs-theme="dark"] input, [data-bs-theme="dark"] textarea{
-	background-color: #C0C0C080;
+[data-bs-theme="dark"] input,
+[data-bs-theme="dark"] textarea {
+  background-color: #c0c0c080;
 }
