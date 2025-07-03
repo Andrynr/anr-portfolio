@@ -18,9 +18,11 @@ body {
   overflow-y: hidden;
 }
 
-.c-b-projet,
-.project-card {
-  height: 100%;
+.c-b-projet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-inline: 0;
 }
 
 /*Modal de description*/

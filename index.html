@@ -11,7 +11,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="E:\bootstrap-5.3.3-dist\css/bootstrap.min.css"
     />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
@@ -67,15 +67,14 @@
       <div class="row gx-md-2 gx-xl-4 gy-3">
         <div class="col-md-7">
           <section class="fade-in card mb-2" id="presentation">
-            <div class="card-header"><h2>Presentation</h2></div>
+            <div class="card-header"><h2>Présentation</h2></div>
             <div class="card-body">
               <p class="card-text">
-                Êtes-vous à la recherche d'une personne compétente et sérieuse à
-                qui confier votre projet web? Je pourrais vous aider à le
-                réaliser. Vous avez une idée, un modèle, ou vous me dites
-                simplement ce que vous avez besoins 😉? Je me charge de le
-                transformer en page web ou site fonctionnel, responsive et
-                adapté à vos attentes.
+                Vous avez un projet web à créer, améliorer ou corriger ? Je vous
+                aide à concevoir un site fonctionnel, responsive, et adapté à
+                vos besoins. Qu'il s'agisse de développer une page web à partir
+                d'une idée, ou de corriger des bugs pour améliorer l'expérience
+                utilisateur, je peux vous accompagner.
               </p>
             </div>
           </section>
@@ -86,9 +85,15 @@
               <div class="card-body row mx-0 p-1">
                 <!-- Application to-do -->
                 <div class="card fade-in col-md-6 project-card" id="TodoApp">
-                  <div class="card-body c-b-projet">
+                  <div class="card-body c-b-projet" id="To-do">
                     <h5 class="card-title">Todo-App</h5>
-                    <p>Une application React pour une liste de tache</p>
+                    <p class="mb-0">
+                      Une application React permettant de gérer une liste de
+                      tâche: ajout, suppression et marquage comme terminée.
+                      Responsive et intuitive, elle a été développée pour
+                      m'entraîner à manipuler les états et les composants en
+                      React.
+                    </p>
                   </div>
                   <div class="card-footer row px-0">
                     <span class="w-auto col-sm-6 pe-0">React, JavaScript</span>
@@ -97,7 +102,7 @@
                         type="button"
                         class="btn btn-info btn-sm ms-auto"
                         data-bs-toggle="modal"
-                        data-bs-target="#TodoAppImg"
+                        data-bs-target="#Modal_To-do"
                       >
                         Aperçu
                       </button>
@@ -110,7 +115,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="modal fade" id="TodoAppImg">
+                <div class="modal fade" id="Modal_To-do">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -192,13 +197,21 @@
                 </div>
 
                 <!-- Projet Formulaire -->
-                <div class="card fade-in col-md-6 project-card">
+                <div
+                  class="card fade-in col-md-6 project-card"
+                  id="form-connexion"
+                >
                   <div class="card-body c-b-projet">
                     <h5 class="card-title">Formulaire de connexion</h5>
-                    <p class="card-text">Une formulaire de connexion Basic</p>
+                    <p class="card-text">
+                      Un formulaire de connexion simple en HTML/CSS avec
+                      vérification côté serveur en PHP. <br />
+                      Ce projet m'a permis de renforcer mes bases sur la gestion
+                      des sessions et la validation des données.
+                    </p>
                   </div>
                   <div class="card-footer row px-0">
-                    <span class="w-auto col-sm-6 pe-0">HTML, CSS, PHP </span>
+                    <span class="w-auto pe-0">HTML, CSS, PHP </span>
                     <div class="col d-flex px-1">
                       <button
                         type="button"
@@ -220,7 +233,11 @@
                   <div class="card-body c-b-projet">
                     <h5 class="card-title">Gestion d'un parc informatique</h5>
                     <p class="card-text">
-                      Une application web de gestion d'un parc informatique.
+                      Une application Laravel permettant de gérer un inventaire
+                      de matériel informatique : ajout, modification,
+                      suppression d'éléments (matériels, marques, fournisseur).
+                      Le système intègre une authentification et une gestion des
+                      utilisateurs.
                     </p>
                   </div>
                   <div class="card-footer row px-0">
@@ -240,7 +257,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="modal fade" id="GPI">
+                <div class="modal fade" id="Modal_GPI">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -350,13 +367,13 @@
         <!-- Section AboutMe -->
         <div class="col-md-5">
           <section class="fade-in" id="aboutMe">
-            <div class="card mb-2">
+            <div class="card">
               <div class="card-header"><h2>A propos de moi</h2></div>
               <div class="card-body">
                 <p>
-                  Bonjour ! je suis Romuald, un web développeur junior passionné
-                  par la création de sites modernes et fonctionnels. J'utilise
-                  des technologies comme
+                  Bonjour ! je suis Romuald, un développeur web junior passionné
+                  par la création de sites modernes et fonctionnels. <br />
+                  J'utilise des technologies comme
                   <span class="text-info fw-light"
                     >HTML, CSS3, JavaScript, PHP</span
                   >, et des outils comme
@@ -395,52 +412,53 @@
                   <b
                     title="autodidacte, autonomie, sens d'organisation, esprit d'analyse, ..."
                     >générales</b
-                  >
+                  >.
                 </p>
                 <hr />
                 <h5>Lycée Victor Miadana</h5>
                 <p class="text-secondary fw-medium">
                   Baccalauréat Série Scientifique
                 </p>
-                <p>Une lycée que j'ai fréquenté de seconde à terminal</p>
+                <p>Un lycée que j'ai fréquenté de la seconde à la terminale.</p>
               </div>
             </div>
           </section>
         </div>
-
-        <!-- Section compétence -->
-        <section class="fade-in" id="competences">
-          <h2 class="mt-3">Mes competence</h2>
-          <div class="row g-2">
-            <div class="col-md-6 fade-in">
-              <h4>Language informatique</h4>
-              <ul class="list-group">
-                <li class="list-group-item">HTML</li>
-                <li class="list-group-item">CSS3</li>
-                <li class="list-group-item">JavaScript</li>
-                <li class="list-group-item">PHP</li>
-                <li class="list-group-item">SQL</li>
-              </ul>
-            </div>
-            <div class="col-md-6 fade-in">
-              <h4>Framework, Outils, Bibliothèque</h4>
-              <ul class="list-group">
-                <li class="list-group-item" title="Framework back-end">
-                  Laravel
-                </li>
-                <li class="list-group-item" title="Bibliothèque front-end">
-                  React
-                </li>
-                <li class="list-group-item" title="Framework frontend (styles)">
-                  Bootsrap
-                </li>
-                <li class="list-group-item" title="Version control">Git</li>
-                <li class="list-group-item" title="Version control">MySQL</li>
-              </ul>
-            </div>
-          </div>
-        </section>
       </div>
+    </div>
+    <div class="container">
+      <!-- Section compétence -->
+      <section class="fade-in" id="competences">
+        <h2 class="mt-3">Mes competence</h2>
+        <div class="row g-2">
+          <div class="col-md-6 fade-in">
+            <h4>Language informatique</h4>
+            <ul class="list-group">
+              <li class="list-group-item">HTML</li>
+              <li class="list-group-item">CSS3</li>
+              <li class="list-group-item">JavaScript</li>
+              <li class="list-group-item">PHP</li>
+              <li class="list-group-item">SQL</li>
+            </ul>
+          </div>
+          <div class="col-md-6 fade-in">
+            <h4>Framework, Outils, Bibliothèque</h4>
+            <ul class="list-group">
+              <li class="list-group-item" title="Framework back-end">
+                Laravel
+              </li>
+              <li class="list-group-item" title="Bibliothèque front-end">
+                React
+              </li>
+              <li class="list-group-item" title="Framework frontend (styles)">
+                Bootsrap
+              </li>
+              <li class="list-group-item" title="Version control">Git</li>
+              <li class="list-group-item" title="Version control">MySQL</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <!-- Formulaire de proposition de -->
       <section class="fade-in" id="proposition">
