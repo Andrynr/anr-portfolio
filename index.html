@@ -11,7 +11,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="E:\bootstrap-5.3.3-dist\css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
@@ -41,10 +41,10 @@
         >
           <ul class="navbar-nav d-flex">
             <li class="nav-item">
-              <a class="nav-link" href="#projets">MES PROJETS</a>
+              <a class="nav-link" href="#aboutMe">À PROPOS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#aboutMe">À PROPOS</a>
+              <a class="nav-link" href="#projets">MES PROJETS</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#formations">FORMATION</a>
@@ -63,28 +63,45 @@
       <h1 class="display-4 text-primary mt-3">Bienvenue</h1>
       <p>Développeur Web Junior</p>
     </header>
-    <div class="container">
-      <div class="row gx-md-2 gx-xl-4 gy-3">
+    <div class="mx-auto px-2 px-md-3 px-xl-4 px-xxl-5">
+      <div class="row gx-md-2 gx-xl-4">
         <div class="col-md-7">
-          <section class="fade-in card mb-2" id="presentation">
-            <div class="card-header"><h2>Présentation</h2></div>
+          <!-- Section about me -->
+          <section class="fade-in card mb-2" id="aboutMe">
+            <div class="card-header"><h2>À propos</h2></div>
             <div class="card-body">
               <p class="card-text">
-                Vous avez un projet web à créer, améliorer ou corriger ? Je vous
-                aide à concevoir un site fonctionnel, responsive, et adapté à
-                vos besoins. Qu'il s'agisse de développer une page web à partir
-                d'une idée, ou de corriger des bugs pour améliorer l'expérience
-                utilisateur, je peux vous accompagner.
+                Bonjour ! je suis Romuald, un développeur web junior passionné
+                par la création de sites modernes et fonctionnels. <br />
+                J'utilise des technologies comme
+                <span class="text-info fw-light"
+                  >HTML, CSS3, JavaScript, PHP</span
+                >, et des outils comme
+                <span class="text-info fw-light">Laravel, React, Bootstrap</span
+                >.
+              </p>
+              <p class="card-text">
+                Vous avez un projet web ? Je peux le transformer en un site
+                responsive, fonctionnel et adapté à vos besoins : création sur
+                mesure, amélioration d'un site existant ou correction de bugs.
+              </p>
+              <p>
+                Autonome, curieux et en constante progression, je suis toujours
+                prêt à relever de nouveaux défis avec enthousiasme.
               </p>
             </div>
           </section>
 
+          <!-- Mes projets -->
           <section id="projets">
-            <div class="card mt-3">
+            <div class="card my-3">
               <h2 class="card-header">Mes projets</h2>
-              <div class="card-body row mx-0 p-1">
+              <div class="card-body row mx-auto p-1">
                 <!-- Application to-do -->
-                <div class="card fade-in col-md-6 project-card" id="TodoApp">
+                <div
+                  class="card fade-in col-md-6 col-xxl-4 project-card"
+                  id="TodoApp"
+                >
                   <div class="card-body c-b-projet" id="To-do">
                     <h5 class="card-title">Todo-App</h5>
                     <p class="mb-0">
@@ -198,7 +215,7 @@
 
                 <!-- Projet Formulaire -->
                 <div
-                  class="card fade-in col-md-6 project-card"
+                  class="card fade-in col-md-6 col-xxl-4 project-card"
                   id="form-connexion"
                 >
                   <div class="card-body c-b-projet">
@@ -229,7 +246,7 @@
                 </div>
 
                 <!-- Projet GPI -->
-                <div class="card fade-in col-md-6 project-card">
+                <div class="card fade-in col-md-6 col-xxl-4 project-card">
                   <div class="card-body c-b-projet">
                     <h5 class="card-title">Gestion d'un parc informatique</h5>
                     <p class="card-text">
@@ -364,62 +381,81 @@
           </section>
         </div>
 
-        <!-- Section AboutMe -->
         <div class="col-md-5">
-          <section class="fade-in" id="aboutMe">
-            <div class="card">
-              <div class="card-header"><h2>A propos de moi</h2></div>
-              <div class="card-body">
-                <p>
-                  Bonjour ! je suis Romuald, un développeur web junior passionné
-                  par la création de sites modernes et fonctionnels. <br />
-                  J'utilise des technologies comme
-                  <span class="text-info fw-light"
-                    >HTML, CSS3, JavaScript, PHP</span
-                  >, et des outils comme
-                  <span class="text-info fw-light"
-                    >Laravel, React, Bootstrap</span
-                  >
-                  pour concevoir
-                  <span class="fw-medium"
-                    >des interfaces responsives, corriger des bugs et améliorer
-                    l'expérience utilisateur.</span
-                  >
-                </p>
-                <p class="text-secondary">
-                  Autonome, curieux et en constante progression, je suis
-                  toujours prêt à relever de nouveaux défis.
-                </p>
+          <!-- Mes formations -->
+          <section class="fade-in" id="myFormations">
+            <div id="formations" class="card mb-3">
+              <div class="card-header"><h2>Mes formations</h2></div>
+              <div class="card-body row m-0 gx-xl-1">
+                <div class="col-xl-6">
+                  <h5 class="card-title">
+                    CNTEMAD - Genie logiciel et base de donnée
+                  </h5>
+                  <p class="text-black-50">Diplôme de licence</p>
+                  <p>
+                    Une formation qui m'a permis d'acquérir des compétences
+                    <b title="programmation, gestion de base de données"
+                      >techniques</b
+                    >
+                    en informatique, ainsi que des compétence
+                    <b
+                      title="autodidacte, autonomie, sens d'organisation, esprit d'analyse, ..."
+                      >générales</b
+                    >.
+                  </p>
+                </div>
+                <div class="vr mx-auto d-none d-xl-block"></div>
+                <hr class="d-xl-none" />
+                <div class="col-xl-5">
+                  <h5>Lycée Victor Miadana</h5>
+                  <p class="text-black-50">Baccalauréat Série Scientifique</p>
+                  <p>
+                    Un lycée que j'ai fréquenté de la seconde à la terminale.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
-
-          <!-- Mes formations -->
-          <section class="fade-in" id="myFormations">
-            <div id="formations" class="card mt-3">
-              <div class="card-header"><h2>Mes formations</h2></div>
-              <div class="card-body">
-                <h5 class="card-title">
-                  CNTEMAD - Genie logiciel et base de donnée
-                </h5>
-                <p class="text-secondary fw-medium">Diplôme de licence</p>
-                <p>
-                  Une formation qui m'a permis d’acquérir des compétences
-                  <b title="programmation, gestion de base de données"
-                    >techniques</b
-                  >
-                  en informatique, ainsi que des compétence
-                  <b
-                    title="autodidacte, autonomie, sens d'organisation, esprit d'analyse, ..."
-                    >générales</b
-                  >.
-                </p>
-                <hr />
-                <h5>Lycée Victor Miadana</h5>
-                <p class="text-secondary fw-medium">
-                  Baccalauréat Série Scientifique
-                </p>
-                <p>Un lycée que j'ai fréquenté de la seconde à la terminale.</p>
+          <!-- Mes competences -->
+          <section class="fade-in" id="competences">
+            <div class="card">
+              <h2 class="card-header">Mes competence</h2>
+              <div class="g-2 card-body row m-0">
+                <div
+                  class="fade-in col-xxl-6 d-flex flex-column justify-content-between"
+                >
+                  <h4 class="card-title mb-3">Language informatique</h4>
+                  <ul class="list-group">
+                    <li class="list-group-item">HTML</li>
+                    <li class="list-group-item">CSS3</li>
+                    <li class="list-group-item">JavaScript</li>
+                    <li class="list-group-item">PHP</li>
+                    <li class="list-group-item">SQL</li>
+                  </ul>
+                </div>
+                <div
+                  class="fade-in col d-flex flex-column justify-content-between"
+                >
+                  <h4 class="card-title">Framework, Outils, Bibliothèque</h4>
+                  <ul class="list-group">
+                    <li class="list-group-item" title="Framework back-end">
+                      Laravel
+                    </li>
+                    <li class="list-group-item" title="Bibliothèque front-end">
+                      React
+                    </li>
+                    <li
+                      class="list-group-item"
+                      title="Framework frontend (styles)"
+                    >
+                      Bootsrap
+                    </li>
+                    <li class="list-group-item" title="Version control">Git</li>
+                    <li class="list-group-item" title="Version control">
+                      MySQL
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
@@ -427,39 +463,6 @@
       </div>
     </div>
     <div class="container">
-      <!-- Section compétence -->
-      <section class="fade-in" id="competences">
-        <h2 class="mt-3">Mes competence</h2>
-        <div class="row g-2">
-          <div class="col-md-6 fade-in">
-            <h4>Language informatique</h4>
-            <ul class="list-group">
-              <li class="list-group-item">HTML</li>
-              <li class="list-group-item">CSS3</li>
-              <li class="list-group-item">JavaScript</li>
-              <li class="list-group-item">PHP</li>
-              <li class="list-group-item">SQL</li>
-            </ul>
-          </div>
-          <div class="col-md-6 fade-in">
-            <h4>Framework, Outils, Bibliothèque</h4>
-            <ul class="list-group">
-              <li class="list-group-item" title="Framework back-end">
-                Laravel
-              </li>
-              <li class="list-group-item" title="Bibliothèque front-end">
-                React
-              </li>
-              <li class="list-group-item" title="Framework frontend (styles)">
-                Bootsrap
-              </li>
-              <li class="list-group-item" title="Version control">Git</li>
-              <li class="list-group-item" title="Version control">MySQL</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <!-- Formulaire de proposition de -->
       <section class="fade-in" id="proposition">
         <form
