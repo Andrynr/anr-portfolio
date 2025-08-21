@@ -93,6 +93,29 @@ body {
   background-color: #c0c0c080;
 }
 
+#Modal_VoyageAI .modal-header {
+  background: linear-gradient(to right, #fff 15%, #4a90e2, #1c2e4a);
+}
+#Modal_VoyageAI .modal-content {
+  background: linear-gradient(to bottom, #fff 15%, #4a90e2, #1c2e4a);
+}
+
+#Modal_To-do .modal-header {
+  background: linear-gradient(to right, #bdd1c5 10%, rgba(15, 15, 216, 0.6))
+    fixed;
+}
+#Modal_To-do .modal-content {
+  background: linear-gradient(to bottom, #bdd1c5 10%, rgba(15, 15, 216, 0.6))
+    fixed;
+}
+
+#Modal_GPI .modal-header {
+  background-image: linear-gradient(to right, #00ff8000, #00990066, #0066444d);
+}
+#Modal_GPI .modal-content {
+  background-image: linear-gradient(to bottom, #00ff8000, #00990066, #0066444d);
+}
+
 .list-group {
   box-shadow: -0.1em 0.1em 5px 2px #c0c0c0;
 }

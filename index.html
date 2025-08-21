@@ -8,6 +8,11 @@
       name="description"
       content="Développeur web junior - Portfolio de Romuald Nomenjanahary"
     />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -97,6 +102,225 @@
             <div class="card my-3">
               <h2 class="card-header">Mes projets</h2>
               <div class="card-body row mx-auto p-1">
+                <!-- Spending Tracker -->
+                <div class="card fade-in col-md-6 col-xxl-4 project-card">
+                  <div class="card-body c-b-projet" id="SpendingTracker">
+                    <h5 class="card-title">Spending Tracker</h5>
+                    <p>
+                      Application de gestion de finances permettant le suivi des
+                      revenus, dépenses et du solde en temps réel, développée
+                      avec React.
+                    </p>
+                  </div>
+                  <div class="card-footer row px-0">
+                    <span class="w-auto col-sm-6 pe-0">React, bootstrap</span>
+                    <div class="col d-flex px-1">
+                      <button
+                        type="button"
+                        class="btn btn-info btn-sm ms-auto"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Modal_ST"
+                      >
+                        Apercu
+                      </button>
+                      <a
+                        class="btn btn-warning btn-sm mx-1"
+                        href="https://spending-tracker-ten-flame.vercel.app"
+                        target="_blank"
+                        >Démo</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="modal fade"
+                  id="Modal_ST"
+                  tabindex="-1"
+                  aria-labelledby="Modal_ST_Label"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="Modal_ST_Label">
+                          Spending Tracker
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div
+                          id="SpendingTrackerImgs"
+                          class="carousel slide"
+                          data-bs-ride="carousel"
+                        >
+                          <div class="carousel-indicators"></div>
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img
+                                src="images/Spending Tracker/ST Main Page.jpeg"
+                                class="d-block img-fluid rounded"
+                                alt="Page principale"
+                              />
+                            </div>
+                            <div class="carousel-item">
+                              <img
+                                src="images/Spending Tracker/ST Liste.jpeg"
+                                class="d-block img-fluid rounded"
+                                alt="Liste des transactions"
+                              />
+                            </div>
+                          </div>
+                          <button
+                            class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#SpendingTrackerImgs"
+                            data-bs-slide="prev"
+                          >
+                            <span
+                              class="carousel-control-prev-icon"
+                              aria-hidden="true"
+                            ></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button
+                            class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#SpendingTrackerImgs"
+                            data-bs-slide="next"
+                          >
+                            <span
+                              class="carousel-control-next-icon"
+                              aria-hidden="true"
+                            ></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- VoyageAI Landing Page -->
+                <div class="card fade-in col-md-6 col-xxl-4 project-card">
+                  <div class="card-body c-b-projet" id="VoyageAI">
+                    <h5 class="card-title">VoyageAI Landing Page</h5>
+                    <p class="mb-0">
+                      Landing page réalisée pour un contest, présentant le
+                      concept d'un assistant de voyage intelligent. Il s'agit
+                      uniquement d'une maquette fonctionnelle axée sur le design
+                      et la mise en page.
+                    </p>
+                  </div>
+                  <div class="card-footer row px-0">
+                    <span class="w-auto col-sm-6 pe-0">HTML, CSS, JS</span>
+                    <div class="col d-flex px-1">
+                      <button
+                        type="button"
+                        class="btn btn-info btn-sm ms-auto"
+                        data-bs-toggle="modal"
+                        data-bs-target="#Modal_VoyageAI"
+                      >
+                        Apercu</button
+                      ><a
+                        class="btn btn-warning btn-sm mx-1"
+                        href="https://voyageailp.netlify.app"
+                        target="_blank"
+                        >Démo</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="modal fade"
+                  id="Modal_VoyageAI"
+                  aria-labelledby="Modal_VoyageAI_Label"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="Modal_VoyageAI_Label">
+                          VoyageAI Landing Page
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body modal-fixed-height">
+                        <div
+                          id="VoyageAIImgs"
+                          class="carousel slide"
+                          data-bs-ride="carousel"
+                        >
+                          <div class="carousel-indicators"></div>
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img
+                                src="./images/VoyageAI/VoyageAI-sm.png"
+                                class="img-fluid rounded d-block"
+                                alt="Landing Page sur petit écran"
+                              />
+                            </div>
+                            <div class="carousel-item">
+                              <img
+                                src="./images/VoyageAI/VoyageAI-lg.png"
+                                class="img-fluid rounded d-block"
+                                alt="Landing Page sur écran moyen"
+                              />
+                            </div>
+                            <div class="carousel-item">
+                              <img
+                                src="./images/VoyageAI/VoyageAI-xxl.png"
+                                class="img-fluid rounded d-block"
+                                alt="Landing Page sur très grand écran"
+                              />
+                            </div>
+                            <div class="carousel-item">
+                              <img
+                                src="./images/VoyageAI/AI Travel Landing Page.png"
+                                class="img-fluid rounded d-block"
+                                alt="AI Travel Landing Page"
+                              />
+                            </div>
+                          </div>
+                          <button
+                            class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#VoyageAIImgs"
+                            data-bs-slide="prev"
+                          >
+                            <span
+                              class="carousel-control-prev-icon"
+                              aria-hidden="true"
+                            ></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button
+                            class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#VoyageAIImgs"
+                            data-bs-slide="next"
+                          >
+                            <span
+                              class="carousel-control-next-icon"
+                              aria-hidden="true"
+                            ></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <!-- Application to-do -->
                 <div
                   class="card fade-in col-md-6 col-xxl-4 project-card"
@@ -105,11 +329,10 @@
                   <div class="card-body c-b-projet" id="To-do">
                     <h5 class="card-title">Todo-App</h5>
                     <p class="mb-0">
-                      Une application React permettant de gérer une liste de
-                      tâche: ajout, suppression et marquage comme terminée.
-                      Responsive et intuitive, elle a été développée pour
-                      m'entraîner à manipuler les états et les composants en
-                      React.
+                      Une application React responsive permettant la gestion de
+                      taches: ajout, suppression et marquage comme terminée. Ce
+                      projet m'a permis de pratiquer la gestion d'état avec les
+                      hooks, la composition de composants.
                     </p>
                   </div>
                   <div class="card-footer row px-0">
@@ -136,7 +359,7 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h2 class="modal-title">Application To-do</h2>
+                        <h5 class="modal-title">Application To-do</h5>
                         <button
                           type="button"
                           class="btn-close"
@@ -221,8 +444,8 @@
                   <div class="card-body c-b-projet">
                     <h5 class="card-title">Formulaire de connexion</h5>
                     <p class="card-text">
-                      Un formulaire de connexion simple en HTML/CSS avec
-                      vérification côté serveur en PHP. <br />
+                      Formulaire d'authentification simple réalisé en HTML/CSS
+                      avec traitement côté serveur en PHP. <br />
                       Ce projet m'a permis de renforcer mes bases sur la gestion
                       des sessions et la validation des données.
                     </p>
@@ -251,10 +474,9 @@
                     <h5 class="card-title">Gestion d'un parc informatique</h5>
                     <p class="card-text">
                       Une application Laravel permettant de gérer un inventaire
-                      de matériel informatique : ajout, modification,
-                      suppression d'éléments (matériels, marques, fournisseur).
-                      Le système intègre une authentification et une gestion des
-                      utilisateurs.
+                      de matériel informatique. Elle inclut des fonctionnalités
+                      CRUD(matériels, marques, fournisseurs). Le système intègre
+                      une authentification et une gestion des utilisateurs.
                     </p>
                   </div>
                   <div class="card-footer row px-0">
