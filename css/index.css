@@ -64,6 +64,10 @@ body {
   transform: translateY(0);
 }
 
+.list-group-item {
+  cursor: pointer;
+}
+
 /*Couleur*/
 body {
   background-color: rgb(176 197 247 / 56%);

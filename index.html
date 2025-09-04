@@ -105,12 +105,25 @@
                 <!-- Spending Tracker -->
                 <div class="card fade-in col-md-6 col-xxl-4 project-card">
                   <div class="card-body c-b-projet" id="SpendingTracker">
-                    <h5 class="card-title">Spending Tracker</h5>
+                    <h5 class="card-title">
+                      Spending Tracker
+                    </h5>
+
                     <p>
                       Application de gestion de finances permettant le suivi des
                       revenus, dépenses et du solde en temps réel, développée
                       avec React.
                     </p>
+                    <div class="progress" title="Projet en cours">
+                      <div
+                        class="progress-bar bg-primary bg-opacity-25 progress-bar-striped progress-bar-animated
+                        role="progressbar"
+                        style="width: 60%"
+                        aria-valuenow="60"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >En cours</div>
+                    </div>
                   </div>
                   <div class="card-footer row px-0">
                     <span class="w-auto col-sm-6 pe-0">React, bootstrap</span>
@@ -120,6 +133,7 @@
                         class="btn btn-info btn-sm ms-auto"
                         data-bs-toggle="modal"
                         data-bs-target="#Modal_ST"
+                        aria-label="Afficher le modal"
                       >
                         Apercu
                       </button>
@@ -127,6 +141,8 @@
                         class="btn btn-warning btn-sm mx-1"
                         href="https://spending-tracker-ten-flame.vercel.app"
                         target="_blank"
+                        title="Voir le démo en ligne"
+                        aria-label="Voir le démo en ligne"
                         >Démo</a
                       >
                     </div>
@@ -224,12 +240,15 @@
                         class="btn btn-info btn-sm ms-auto"
                         data-bs-toggle="modal"
                         data-bs-target="#Modal_VoyageAI"
+                        aria-label="Afficher le modal"
                       >
                         Apercu</button
                       ><a
                         class="btn btn-warning btn-sm mx-1"
                         href="https://voyageailp.netlify.app"
                         target="_blank"
+                        title="Voir le démo en ligne"
+                        aria-label="Voir le démo en ligne"
                         >Démo</a
                       >
                     </div>
@@ -343,6 +362,7 @@
                         class="btn btn-info btn-sm ms-auto"
                         data-bs-toggle="modal"
                         data-bs-target="#Modal_To-do"
+                        aria-label="Afficher le modal"
                       >
                         Aperçu
                       </button>
@@ -350,6 +370,8 @@
                         class="btn btn-warning btn-sm mx-1"
                         href="https://to-do-ten-flame.vercel.app"
                         target="_blank"
+                        title="Voir le démo en ligne"
+                        aria-label="Voir le démo en ligne"
                         >Démo</a
                       >
                     </div>
@@ -458,6 +480,7 @@
                         class="btn btn-info btn-sm ms-auto disabled"
                         data-bs-toggle="modal"
                         data-bs-target="#GPI"
+                        aria-label="Afficher le modal"
                       >
                         Aperçu
                       </button>
@@ -487,6 +510,7 @@
                         class="btn btn-info btn-sm ms-auto"
                         data-bs-toggle="modal"
                         data-bs-target="#Modal_GPI"
+                        aria-label="Afficher le modal"
                       >
                         Aperçu
                       </button>
@@ -673,7 +697,10 @@
                       Bootsrap
                     </li>
                     <li class="list-group-item" title="Version control">Git</li>
-                    <li class="list-group-item" title="Gestion de base de données">
+                    <li
+                      class="list-group-item"
+                      title="Gestion de base de données"
+                    >
                       MySQL
                     </li>
                   </ul>
@@ -753,6 +780,8 @@
             <a
               href="https://wa.me/261333700552?text=Bonjour%20je%20veux%20vous%20proposer%20un%20projet"
               target="_blank"
+              title="Voir le démo en ligne"
+              aria-label="Voir le démo en ligne"
               >WhatsApp</a
             >
           </li>
