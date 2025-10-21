@@ -52,6 +52,10 @@ body {
   padding: 1em;
 }
 
+.list-group-item {
+  cursor: pointer;
+}
+
 /*Animation au défilement*/
 .fade-in {
   opacity: 0;
@@ -64,8 +68,18 @@ body {
   transform: translateY(0);
 }
 
-.list-group-item {
-  cursor: pointer;
+/* Animation aux survoles */
+.hov-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hov-scale:hover {
+  transform: scale(1.02);
+  z-index: 1;
+}
+.nav-item {
+  border-radius: 0.5rem;
+  padding-inline: 0.2rem;
+  text-align: center;
 }
 
 /*Couleur*/
@@ -75,6 +89,9 @@ body {
 
 .navbar {
   background: rgb(116, 180, 212);
+}
+.nav-item:hover {
+  outline: solid rgba(29, 49, 80, 0.5);
 }
 
 .card:not(.project-card) {
@@ -132,6 +149,10 @@ body {
   background: rgb(22 138 173 / 50%);
 }
 
+.project-card:hover {
+  background-color: rgb(206, 211, 216);
+}
+
 /*Colors with Dark mode*/
 [data-bs-theme="dark"] .navbar {
   background-color: rgb(64 129 160);
@@ -140,4 +161,12 @@ body {
 [data-bs-theme="dark"] input,
 [data-bs-theme="dark"] textarea {
   background-color: #c0c0c080;
+}
+
+[data-bs-theme="dark"] .project-card:hover {
+  background-color: rgb(71, 71, 71);
+}
+
+[data-bs-theme="dark"] .card-body:not(.c-b-projet) {
+  background-color: rgb(92, 94, 100);
 }
