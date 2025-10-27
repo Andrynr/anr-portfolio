@@ -17,7 +17,7 @@ btn.addEventListener("click", () => {
   localStorage.setItem("theme", newTheme);
   updateIcon(newTheme);
 });
-// Changement d'icone du thème
+// Changement d’icône du thème
 function updateIcon(theme) {
   btn.classList.add(theme === "dark" ? "btn-dark" : "btn-light");
   btn.classList.remove(theme === "dark" ? "btn-light" : "btn-dark");
@@ -28,6 +28,21 @@ function updateIcon(theme) {
     icon.classList.remove("rotate");
   }, 400);
 }
+
+/* Fermer automatiquement la barre de navigation */
+const navigation = document.getElementById("navigation");
+
+window.addEventListener("click", (e) => {
+  if (!navigation.contains(e.target)) {
+    navigation.classList.remove("show");
+  }
+});
+
+navigation.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    navigation.classList.remove("show");
+  });
+});
 
 /* Carousel indicator */
 document.querySelectorAll(".modal").forEach((modal) => {

@@ -18,6 +18,11 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
   <body>
@@ -37,6 +42,10 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navigation"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="navbar-toggler"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -103,11 +112,11 @@
               <h2 class="card-header">Mes projets</h2>
               <div class="card-body row mx-auto p-1">
                 <!-- Spending Tracker -->
-                <div class="card fade-in hov-scale col-md-6 col-xxl-4 project-card">
+                <div
+                  class="card fade-in hov-scale col-md-6 col-xxl-4 project-card"
+                >
                   <div class="card-body c-b-projet" id="SpendingTracker">
-                    <h5 class="card-title">
-                      Spending Tracker
-                    </h5>
+                    <h5 class="card-title">Spending Tracker</h5>
 
                     <p>
                       Application de gestion de finances permettant le suivi des
@@ -116,13 +125,15 @@
                     </p>
                     <div class="progress" title="Projet en cours">
                       <div
-                        class="progress-bar bg-primary bg-opacity-25 progress-bar-striped progress-bar-animated
+                        class="progress-bar bg-primary bg-opacity-25 progress-bar-striped progress-bar-animated"
                         role="progressbar"
                         style="width: 60%"
                         aria-valuenow="60"
                         aria-valuemin="0"
                         aria-valuemax="100"
-                      >En cours</div>
+                      >
+                        En cours
+                      </div>
                     </div>
                   </div>
                   <div class="card-footer row px-0">
@@ -222,7 +233,9 @@
                 </div>
 
                 <!-- VoyageAI Landing Page -->
-                <div class="card fade-in hov-scale col-md-6 col-xxl-4 project-card">
+                <div
+                  class="card fade-in hov-scale col-md-6 col-xxl-4 project-card"
+                >
                   <div class="card-body c-b-projet" id="VoyageAI">
                     <h5 class="card-title">VoyageAI Landing Page</h5>
                     <p class="mb-0">
@@ -490,7 +503,10 @@
                 </div>
 
                 <!-- Projet GPI -->
-                <div class="card fade-in hov-scale col-md-6 col-xxl-4 project-card" id="GPI">
+                <div
+                  class="card fade-in hov-scale col-md-6 col-xxl-4 project-card"
+                  id="GPI"
+                >
                   <div class="card-body c-b-projet">
                     <h5 class="card-title">Gestion d'un parc informatique</h5>
                     <p class="card-text">
@@ -794,6 +810,10 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     ></script>
-    <script type="text/javascript" src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>

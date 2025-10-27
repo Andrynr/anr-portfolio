@@ -3,6 +3,29 @@ body {
   margin: 0;
   padding: 0;
 }
+/* Navigation */
+
+.nav-item {
+  border-radius: 0.5rem;
+  padding-inline: 0.2rem;
+  text-align: center;
+}
+.menu span {
+  height: 2px;
+  width: 100%;
+  background-color: var(--deep-navy);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+#navigation.show .menu span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+#navigation.show .menu span:nth-child(2) {
+  opacity: 0;
+}
+#navigation.show .menu span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
 
 /*Theme*/
 #themeIcon {
@@ -75,11 +98,6 @@ body {
 .hov-scale:hover {
   transform: scale(1.02);
   z-index: 1;
-}
-.nav-item {
-  border-radius: 0.5rem;
-  padding-inline: 0.2rem;
-  text-align: center;
 }
 
 /*Couleur*/
