@@ -79,6 +79,13 @@ body {
   cursor: pointer;
 }
 
+.trans-2 {
+  transform: translateY(-0.2em);
+}
+.btn-outline-none {
+  border-color: #c0c0f2;
+}
+
 /* Animation sur texte */
 .typewriter {
   display: inline-block;
@@ -134,6 +141,10 @@ body {
 }
 .nav-item:hover {
   outline: solid rgba(29, 49, 80, 0.5);
+}
+
+.ombre {
+  text-shadow: 2px 10px 4px rgba(6, 19, 59, 0.473);
 }
 
 .card:not(.project-card) {
