@@ -79,6 +79,30 @@ body {
   cursor: pointer;
 }
 
+/* Animation sur texte */
+.typewriter {
+  display: inline-block;
+  font-family: monospace;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.curseur {
+  display: inline-flex;
+  width: 2px;
+  height: 1.2em;
+  border-radius: 5px;
+  transform: translateY(2px);
+  background-color: #1414af83;
+  margin-left: 3px;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 /*Animation au défilement*/
 .fade-in {
   opacity: 0;

@@ -87,3 +87,51 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".fade-in").forEach((elmt) => {
   observer.observe(elmt);
 });
+
+/* Animation écriture au clavier */
+const phrases = [
+  "Je suis un développeur web junior.",
+  "Je vous souhaite une agréable traversée dans ce noble portfolio 😊.",
+];
+
+let i = 0;
+let j = 0;
+let phraseCourant = [];
+let Efface = false;
+let estFini = false;
+const texte = document.getElementById("phraseIntro");
+
+const loop = () => {
+  estFini = false;
+  texte.innerHTML = phraseCourant.join("");
+
+  if (i < phrases.length) {
+    if (!Efface && j <= phrases[i].length) {
+      phraseCourant.push(phrases[i][j]);
+      j++;
+      texte.innerHTML = phraseCourant.join("");
+    }
+
+    if (Efface && j > 0) {
+      phraseCourant.pop();
+      j--;
+      texte.innerHTML = phraseCourant.join("");
+    }
+
+    if (j === phrases[i].length) {
+      estFini = true;
+      Efface = true;
+    }
+
+    if (Efface && j === 0) {
+      phraseCourant = [];
+      Efface = false;
+      i++;
+      if (i === phrases.length) i = 0;
+    }
+  }
+
+  const vitesse = estFini ? 2000 : Efface ? 50 : 100;
+  setTimeout(loop, vitesse);
+};
+loop();
