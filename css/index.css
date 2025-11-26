@@ -82,7 +82,7 @@ body {
 .trans-2 {
   transform: translateY(-0.2em);
 }
-.btn-outline-none {
+.btn-outline-gw {
   border-color: #c0c0f2;
 }
 
@@ -108,6 +108,7 @@ body {
   50% {
     opacity: 0;
   }
+  margin-left: 3px;
 }
 
 /*Animation au défilement*/
