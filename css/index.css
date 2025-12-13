@@ -4,7 +4,9 @@ body {
   padding: 0;
 }
 /* Navigation */
-
+.logo {
+  width: 2rem;
+}
 .nav-item {
   border-radius: 0.5rem;
   padding-inline: 0.2rem;
@@ -223,4 +225,62 @@ body {
 
 [data-bs-theme="dark"] .card-body:not(.c-b-projet) {
   background-color: rgb(92, 94, 100);
+}
+
+/* Fond animé */
+.flake {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  transform-origin: center;
+  border-radius: 3px;
+  animation: fall linear infinite;
+}
+/* plusieurs instanciations */
+.f1 {
+  left: 5%;
+  top: -5%;
+  animation-duration: 14s;
+  animation-delay: 0s;
+}
+.f2 {
+  left: 18%;
+  top: -5%;
+  width: 26px;
+  height: 26px;
+  animation-duration: 18s;
+  animation-delay: 2s;
+  opacity: 0.12;
+}
+.f3 {
+  left: 38%;
+  top: -5%;
+  animation-duration: 12s;
+  animation-delay: 1s;
+  transform: rotate(15deg);
+}
+.f4 {
+  left: 62%;
+  top: -5%;
+  animation-duration: 16s;
+  animation-delay: 3s;
+}
+.f5 {
+  left: 82%;
+  top: -5%;
+  width: 10px;
+  height: 10px;
+  animation-duration: 11s;
+  animation-delay: 0.5s;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(115vh) rotate(360deg) scale(0.7);
+    opacity: 0.15;
+  }
 }
