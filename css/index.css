@@ -227,13 +227,17 @@ body {
   background-color: rgb(92, 94, 100);
 }
 
+[data-bs-theme="dark"] .flake {
+  background: rgba(255, 255, 255, 0.08);
+}
+
 /* Fond animé */
 .flake {
   position: absolute;
   width: 18px;
   height: 18px;
-  background: rgba(255, 255, 255, 0.08);
   transform-origin: center;
+  background: rgba(7, 35, 66, 0.08);
   border-radius: 3px;
   animation: fall linear infinite;
 }
