@@ -110,7 +110,6 @@ body {
   50% {
     opacity: 0;
   }
-  margin-left: 3px;
 }
 
 /*Animation au défilement*/
@@ -277,6 +276,12 @@ body {
   height: 10px;
   animation-duration: 11s;
   animation-delay: 0.5s;
+}
+.f6 {
+  left: 45%;
+  top: -5%;
+  animation-duration: 17s;
+  animation-delay: 4s;
 }
 @keyframes fall {
   0% {
