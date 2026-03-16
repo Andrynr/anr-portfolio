@@ -1,3 +1,5 @@
+import I18N from "./i18n.js";
+
 /* Modification du thème */
 const btn = document.getElementById("toggleTheme");
 const html = document.documentElement;
@@ -88,50 +90,76 @@ document.querySelectorAll(".fade-in").forEach((elmt) => {
   observer.observe(elmt);
 });
 
-/* Animation écriture au clavier */
-const phrases = [
-  "Je suis un développeur web junior.",
-  "Je vous souhaite une agréable traversée dans ce noble portfolio 😊.",
-];
+// --- i18n integration ---
+// dynamic import of i18n module (works in modern browsers)
+async function initTypewriter() {
+  // load saved or detected language
+  const lang =
+    localStorage.getItem("lang") || navigator.language.slice(0, 2) || "fr";
 
+  try {
+    await I18N.load(lang);
+    I18N.initSelector("langSelect");
+
+    majPhrases();
+
+    startTypewriter();
+  } catch (e) {
+    console.warn("i18n load failed", e);
+  }
+}
+initTypewriter();
+
+/* Animation écriture au clavier */
+let phrases = ["Hello wo... 🤭", "Hello, visitor! 😌"];
+
+const majPhrases = () => {
+  // Séléction de la phrase
+  const p0 = I18N.t("intro.phrases.0");
+  const p1 = I18N.t("intro.phrases.1");
+  phrases = [p0, p1];
+};
+
+const startTypewriter = () => {
+  loop();
+};
+
+/* Typewriter */
 let i = 0;
 let j = 0;
 let phraseCourant = [];
 let Efface = false;
-let estFini = false;
 const texte = document.getElementById("phraseIntro");
 
 const loop = () => {
-  estFini = false;
-  texte.innerHTML = phraseCourant.join("");
+  const phrase = phrases[i];
 
-  if (i < phrases.length) {
-    if (!Efface && j <= phrases[i].length) {
-      phraseCourant.push(phrases[i][j]);
-      j++;
-      texte.innerHTML = phraseCourant.join("");
-    }
-
-    if (Efface && j > 0) {
-      phraseCourant.pop();
-      j--;
-      texte.innerHTML = phraseCourant.join("");
-    }
-
-    if (j === phrases[i].length) {
-      estFini = true;
+  if (!Efface) {
+    // On écrit
+    phraseCourant.push(phrases[i][j]);
+    j++;
+    if (j === phrase.length) {
       Efface = true;
     }
-
-    if (Efface && j === 0) {
-      phraseCourant = [];
+  } else {
+    // On efface
+    phraseCourant.pop();
+    j--;
+    if (j === 0) {
       Efface = false;
-      i++;
-      if (i === phrases.length) i = 0;
+      i = (i + 1) % phrases.length;
     }
   }
 
-  const vitesse = estFini ? 2000 : Efface ? 50 : 100;
+  texte.innerHTML = phraseCourant.join("");
+
+  const vitesse = j === phrase.length ? 2000 : Efface ? 50 : 100;
   setTimeout(loop, vitesse);
 };
-loop();
+
+const langSelect = document.getElementById("langSelect");
+langSelect.addEventListener("change", async (e) => {
+  const newLang = e.target.value;
+  await I18N.load(newLang);
+  majPhrases();
+});

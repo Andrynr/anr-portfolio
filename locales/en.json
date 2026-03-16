@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "about": "ABOUT",
+    "projects": "PROJECTS",
+    "education": "EDUCATION",
+    "skills": "SKILLS",
+    "contact": "CONTACT"
+  },
+  "header": {
+    "welcome": "Welcome"
+  },
+  "about": {
+    "title": "About",
+    "p1": "Hello! I'm Romuald, a junior web developer passionate about creating modern, functional websites.",
+    "techs": "I use technologies such as",
+    "tools": "and tools like",
+    "p2": "Do you have a web project? I can transform it into a responsive, functional site tailored to your needs: custom build, improving an existing site, or fixing bugs.",
+    "p3": "Independent, curious and continuously learning, I'm always ready to take on new challenges with enthusiasm."
+  },
+  "projects": {
+    "title": "My projects",
+    "sm": "Small screen",
+    "md": "Medium screen",
+    "spending": {
+      "title": "Spending Tracker",
+      "desc": "A finance management app to track income, expenses and balance in real time, built with React.",
+      "status": "In progress",
+      "techs": "React, bootstrap"
+    },
+    "voyage": {
+      "title": "VoyageAI Landing Page",
+      "desc": "Landing page made for a contest, presenting the concept of an intelligent travel assistant. It's a functional mockup focused on design and layout."
+    },
+    "todo": {
+      "title": "Todo-App",
+      "desc": "A responsive React app for task management: add, delete and mark tasks as done. This project helped me practice state management with hooks and component composition.",
+      "task_detail": "Task detail"
+    },
+    "form": {
+      "title": "Login form",
+      "desc": "Simple authentication form built with HTML/CSS and server-side handling in PHP. This project helped me strengthen session handling and data validation.",
+      "techs": "HTML, CSS, PHP"
+    },
+    "gpi": {
+      "title": "IT asset management",
+      "desc": "A Laravel application to manage an inventory of IT equipment. It includes CRUD features (assets, brands, suppliers). The system integrates authentication and user management.",
+      "techs": "Laravel, MySQL",
+      "login": "Login",
+      "landing": "Landing page",
+      "devices": "Devices list",
+      "device_type": "Device type",
+      "brand": "Brands"
+    }
+  },
+  "btn": {
+    "preview": "Preview",
+    "demo": "Demo"
+  },
+  "intro": {
+    "phrases": [
+      "I'm a junior web developer.",
+      "I wish you a pleasant trip through this portfolio 😊."
+    ]
+  },
+  "formations": {
+    "title": "Education",
+    "cntemad": {
+      "title": "CNTEMAD - Software Engineering and Database Management",
+      "degree": "bachelor's degree",
+      "desc": "A program that allowed me to acquire",
+      "tech_skills": "technical It skills",
+      "transition": "as well as",
+      "gen_skills": "general skills"
+    },
+    "lvm": {
+      "title": "Victor Miadana High School",
+      "degree": "Scientific baccalaureate",
+      "desc": "I attended this high school from 10th to 12th grade."
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "language": "Programming language",
+    "other": "Framework, Tools, Library"
+  },
+  "proposition": {
+    "title": "Proposal",
+    "p1": "A project, a site tweak or just bug fixes? You can fill out this form to let me know.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  },
+  "contact": {
+    "title": "Contact me",
+    "download_cv": "Download my CV",
+    "whatsapp": "WhatsApp"
+  }
+}
