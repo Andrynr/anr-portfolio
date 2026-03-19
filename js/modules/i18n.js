@@ -1,4 +1,4 @@
-// Minimal i18n loader
+// i18n loader
 const I18N = (function () {
   const defaultLang =
     localStorage.getItem("lang") ||
@@ -7,6 +7,7 @@ const I18N = (function () {
   let current = defaultLang;
   let dict = {};
 
+  /* Charge les textes */
   async function load(lang) {
     try {
       const res = await fetch(`locales/${lang}.json`);
@@ -26,6 +27,7 @@ const I18N = (function () {
     return key.split(".").reduce((o, k) => o && o[k], dict) || key;
   }
 
+  /* Applique les textes à la page */
   function apply(root = document) {
     root.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
@@ -41,6 +43,7 @@ const I18N = (function () {
     });
   }
 
+  /* Gère le select pour langues */
   function initSelector(selectId = "langSelect") {
     const sel = document.getElementById(selectId);
     if (!sel) return;
