@@ -91,9 +91,8 @@ document.querySelectorAll(".fade-in").forEach((elmt) => {
 });
 
 // --- i18n integration ---
-// dynamic import of i18n module (works in modern browsers)
 async function initTypewriter() {
-  // load saved or detected language
+  // Charger la langue enregistrée
   const lang =
     localStorage.getItem("lang") || navigator.language.slice(0, 2) || "fr";
 
@@ -102,7 +101,6 @@ async function initTypewriter() {
     I18N.initSelector("langSelect");
 
     majPhrases();
-
     startTypewriter();
   } catch (e) {
     console.warn("i18n load failed", e);
@@ -114,12 +112,23 @@ initTypewriter();
 let phrases = ["Hello wo... 🤭", "Hello, visitor! 😌"];
 
 const majPhrases = () => {
-  // Séléction de la phrase
+  // Sélection de la phrase
   const p0 = I18N.t("intro.phrases.0");
   const p1 = I18N.t("intro.phrases.1");
   phrases = [p0, p1];
+
+  // On réinitialise si en cours d'écriture
+  !Efface && resetTypewriter();
 };
 
+// Réinitialisation de la phrase courante
+const resetTypewriter = () => {
+  phraseCourant = [];
+  i = 0;
+  j = 0;
+};
+
+// Déclenche la boucle de Typewriter
 const startTypewriter = () => {
   loop();
 };

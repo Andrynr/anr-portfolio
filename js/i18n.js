@@ -44,6 +44,12 @@ const I18N = (function () {
   function initSelector(selectId = "langSelect") {
     const sel = document.getElementById(selectId);
     if (!sel) return;
+
+    //Remplir le select avec les options de langues disponibles
+    const langs = ["fr", "en"];
+    sel.innerHTML = langs
+      .map((l) => `<option value="${l}">${l.toUpperCase()}</option>`)
+      .join("");
     sel.value = current;
   }
 
