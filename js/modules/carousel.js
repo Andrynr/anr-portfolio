@@ -1,16 +1,18 @@
 export default function initCarousel() {
   /* Carousel indicator */
   document.querySelectorAll(".modal").forEach((modal) => {
+    // Activer le carousel si le modal est affiché
     modal.addEventListener("shown.bs.modal", function () {
       const carousel = modal.querySelector(".carousel");
+      if (!carousel) return;
 
-      const indicatorsContainer = carousel?.querySelector(
+      const indicatorsContainer = carousel.querySelector(
         ".carousel-indicators"
       );
-      const items = carousel?.querySelectorAll(".carousel-item");
-      const carouselId = carousel?.getAttribute("id");
+      const items = carousel.querySelectorAll(".carousel-item");
+      const carouselId = carousel.getAttribute("id");
 
-      if (!carousel || !indicatorsContainer || !items) return;
+      if (!indicatorsContainer || !items.length) return;
 
       indicatorsContainer.innerHTML = "";
 

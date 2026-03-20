@@ -1,12 +1,15 @@
 import getLang from "../utils/lang.js";
 import I18N from "./i18n.js";
 
-const initMultiLang = () => {
+const initMultiLang = async () => {
   // --- i18n integration ---
   async function initTypewriter() {
     try {
       await I18N.load(getLang());
       I18N.initSelector("langSelect");
+
+      // Afficher le body quand les textes sont pretes
+      document.body.style.visibility = "visible";
 
       majPhrases();
       startTypewriter();

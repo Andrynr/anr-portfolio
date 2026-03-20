@@ -10,7 +10,7 @@ const I18N = (function () {
   /* Charge les textes */
   async function load(lang) {
     try {
-      const res = await fetch(`locales/${lang}.json`);
+      const res = await fetch(`../../locales/${lang}.json`);
       if (!res.ok) throw new Error("Not found");
       dict = await res.json();
       current = lang;
