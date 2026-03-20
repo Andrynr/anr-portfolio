@@ -96,5 +96,12 @@
     "download_cv": "Télécharger mon CV",
     "whatsapp": "WhatsApp"
   },
-  "copyright": "Tous droits réservés."
+  "copyright": "Tous droits réservés.",
+  "gratitude": {
+    "title": "Merci pour votre message !",
+    "thanks": "Merci ☺!",
+    "msg": "Votre message a bien été envoyé ✨. Je vous répondrai dès que possible. 🙇‍♂",
+    "bye": "À bientôt !",
+    "link": "Retour à l'accueil"
+  }
 }

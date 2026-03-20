@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Merci pour votre message !</title>
+    <title data-i18n="gratitude.title">Merci pour votre message !</title>
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -18,13 +18,18 @@
   </head>
   <body class="d-flex justify-content-center align-items-center vh-100">
     <div class="text-center">
-      <h1 class="text-success display-1">Merci ☺!</h1>
-      <p>
+      <h1 class="text-success display-1" data-i18n="gratitude.thanks">
+        Merci ☺!
+      </h1>
+      <p data-i18n="gratitude.msg">
         Votre message a bien été envoyé ✨. Je vous répondrai dès que possible.
         🙇‍♂
       </p>
-      <p class="fw-medium">À bientôt !</p>
-      <a href="/anr-portfolio/">Retour à l'accueil</a>
+      <p class="fw-medium" data-i18n="gratitude.bye">À bientôt !</p>
+      <a href="/anr-portfolio/" data-i18n="gratitude.link"
+        >Retour à l'accueil</a
+      >
     </div>
+    <script type="module" src="js/merci.js"></script>
   </body>
 </html>

@@ -1,14 +1,11 @@
+import getLang from "../utils/lang.js";
 import I18N from "./i18n.js";
 
 const initMultiLang = () => {
   // --- i18n integration ---
   async function initTypewriter() {
-    // Charger la langue enregistrée
-    const lang =
-      localStorage.getItem("lang") || navigator.language.slice(0, 2) || "fr";
-
     try {
-      await I18N.load(lang);
+      await I18N.load(getLang());
       I18N.initSelector("langSelect");
 
       majPhrases();
