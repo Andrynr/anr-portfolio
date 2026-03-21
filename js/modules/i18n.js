@@ -10,12 +10,20 @@ const I18N = (function () {
   /* Charge les textes */
   async function load(lang) {
     try {
-      const res = await fetch(`../../locales/${lang}.json`);
+      const base = new URL("../../locales/", import.meta.url);
+      const res = await fetch(`${base}${lang}.json`);
+
       if (!res.ok) throw new Error("Not found");
+
       dict = await res.json();
       current = lang;
       localStorage.setItem("lang", lang);
+
       apply();
+
+      // Afficher le body quand les textes sont pretes
+      document.body.style.visibility = "visible";
+
       return true;
     } catch (e) {
       console.warn("i18n load failed for", lang, e);

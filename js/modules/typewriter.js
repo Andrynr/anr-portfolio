@@ -2,23 +2,6 @@ import getLang from "../utils/lang.js";
 import I18N from "./i18n.js";
 
 const initMultiLang = async () => {
-  // --- i18n integration ---
-  async function initTypewriter() {
-    try {
-      await I18N.load(getLang());
-      I18N.initSelector("langSelect");
-
-      // Afficher le body quand les textes sont pretes
-      document.body.style.visibility = "visible";
-
-      majPhrases();
-      startTypewriter();
-    } catch (e) {
-      console.warn("i18n load failed", e);
-    }
-  }
-  initTypewriter();
-
   /* Animation écriture au clavier */
   let phrases = ["Hello wo... 🤭", "Hello, visitor! 😌"];
 
@@ -84,6 +67,21 @@ const initMultiLang = async () => {
     await I18N.load(newLang);
     majPhrases();
   });
+
+  // --- i18n integration ---
+  async function initTypewriter() {
+    try {
+      await I18N.load(getLang());
+
+      I18N.initSelector("langSelect");
+
+      majPhrases();
+      startTypewriter();
+    } catch (e) {
+      console.warn("i18n load failed", e);
+    }
+  }
+  await initTypewriter();
 };
 
 export default initMultiLang;
