@@ -29,12 +29,14 @@
     },
     "voyage": {
       "title": "VoyageAI Landing Page",
-      "desc": "Landing page réalisée pour un contest, présentant le concept d'un assistant de voyage intelligent. Il s'agit uniquement d'une maquette fonctionnelle axée sur le design et la mise en page."
+      "desc": "Landing page réalisée pour un contest, présentant le concept d'un assistant de voyage intelligent. Il s'agit uniquement d'une maquette fonctionnelle axée sur le design et la mise en page.",
+      "techs": "HTML, CSS, JS"
     },
     "todo": {
       "title": "Todo-App",
       "desc": "Une application React responsive permettant la gestion de taches: ajout, suppression et marquage comme terminée. Ce projet m'a permis de pratiquer la gestion d'état avec les hooks, la composition de composants.",
-      "task_detail": "Détail de la tache"
+      "task_detail": "Détail de la tache",
+      "techs": "React, JavaScript"
     },
     "form": {
       "title": "Formulaire de connexion",

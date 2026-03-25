@@ -29,12 +29,14 @@
     },
     "voyage": {
       "title": "VoyageAI Landing Page",
-      "desc": "Landing page made for a contest, presenting the concept of an intelligent travel assistant. It's a functional mockup focused on design and layout."
+      "desc": "Landing page made for a contest, presenting the concept of an intelligent travel assistant. It's a functional mockup focused on design and layout.",
+      "techs": "HTML, CSS, JS"
     },
     "todo": {
       "title": "Todo-App",
       "desc": "A responsive React app for task management: add, delete and mark tasks as done. This project helped me practice state management with hooks and component composition.",
-      "task_detail": "Task detail"
+      "task_detail": "Task detail",
+      "techs": "React, JavaScript"
     },
     "form": {
       "title": "Login form",

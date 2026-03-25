@@ -173,26 +173,26 @@ body {
   background-color: #c0c0c080;
 }
 
-#Modal_VoyageAI .modal-header {
+.modal-voyageAI .modal-header {
   background: linear-gradient(to right, #fff 15%, #4a90e2, #1c2e4a);
 }
-#Modal_VoyageAI .modal-content {
+.modal-voyageAI .modal-content {
   background: linear-gradient(to bottom, #fff 15%, #4a90e2, #1c2e4a);
 }
 
-#Modal_To-do .modal-header {
+.modal-todo .modal-header {
   background: linear-gradient(to right, #bdd1c5 10%, rgba(15, 15, 216, 0.6))
     fixed;
 }
-#Modal_To-do .modal-content {
+.modal-todo .modal-content {
   background: linear-gradient(to bottom, #bdd1c5 10%, rgba(15, 15, 216, 0.6))
     fixed;
 }
 
-#Modal_GPI .modal-header {
+.modal-gpi .modal-header {
   background-image: linear-gradient(to right, #00ff8000, #00990066, #0066444d);
 }
-#Modal_GPI .modal-content {
+.modal-gpi .modal-content {
   background-image: linear-gradient(to bottom, #00ff8000, #00990066, #0066444d);
 }
 

@@ -1,10 +1,14 @@
+const carousel = modal.querySelector(".carousel");
+
 export default function initCarousel() {
-  /* Carousel indicator */
-  document.querySelectorAll(".modal").forEach((modal) => {
-    // Activer le carousel si le modal est affiché
-    modal.addEventListener("shown.bs.modal", function () {
-      const carousel = modal.querySelector(".carousel");
+  /* Carousel à l'ouverture du modal */
+  document
+    .querySelector("#modal")
+    .addEventListener("shown.bs.modal", function () {
+      // Activer le carousel si le modal est affiché
       if (!carousel) return;
+
+      resetCarousel();
 
       const indicatorsContainer = carousel.querySelector(
         ".carousel-indicators"
@@ -31,5 +35,37 @@ export default function initCarousel() {
         indicatorsContainer.appendChild(button);
       });
     });
-  });
 }
+
+export const loadCarousel = (projet) => {
+  const imgs = projet.imgs;
+
+  try {
+    if (!imgs?.length) throw new Error("Y a pas d'images");
+
+    const carouselInner = document.getElementById("carousel-inner");
+    carouselInner.innerHTML = imgs
+      .map(
+        (img, i) =>
+          `
+        <div
+        class="carousel-item mx-auto ${
+          i === 0 ? "active" : ""
+        }"><img src="images/${projet.dossierImgs}/${img.name}" 
+        loading="lazy" class="img-fluid rounded d-block mx-auto" 
+        alt="${img.altText}"
+        />
+        </div>
+        `
+      )
+      .join("");
+  } catch (error) {
+    console.log("Erreur en chargeant les images :", error);
+  }
+};
+
+const resetCarousel = () => {
+  // Reset du carousel
+  const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
+  bsCarousel.to(0);
+};

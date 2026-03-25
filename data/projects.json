@@ -1,0 +1,122 @@
+{
+  "Spending Tracker": {
+    "titre": "Spending Tracker",
+    "id": "spendingTracker",
+    "EC": "true",
+    "progress": "60",
+    "lien": "https://spending-tracker-ten-flame.vercel.app",
+    "i18n": {
+      "title": "projects.spending.title",
+      "desc": "projects.spending.desc",
+      "techs": "projects.spending.techs",
+      "status": "projects.spending.status"
+    },
+    "dossierImgs": "Spending Tracker",
+    "imgs": [
+      {
+        "name": "ST Main Page.jpeg",
+        "altText": "Page principale"
+      },
+      { "name": "ST Liste.jpeg", "altText": "Page principale" }
+    ]
+  },
+  "VoyageAI": {
+    "titre": "VoyageAI landing page",
+    "modalClass": "modal-voyageAI",
+    "id": "voyageAI",
+    "lien": "https://voyageailp.netlify.app",
+    "i18n": {
+      "title": "projects.voyage.title",
+      "desc": "projects.voyage.desc",
+      "techs": "projects.voyage.techs"
+    },
+    "dossierImgs": "VoyageAI",
+    "modalHeight": "modal-fixed-height",
+    "imgs": [
+      {
+        "name": "AI Travel Landing Page.png",
+        "altText": "VoyageAI landing page"
+      },
+      {
+        "name": "VoyageAI-sm.png",
+        "altText": "Landing Page sur petit écran"
+      },
+      {
+        "name": "VoyageAI-lg.png",
+        "altText": "Landing Page sur écran moyen"
+      },
+      {
+        "name": "VoyageAI-xxl.png",
+        "altText": "Landing Page sur très grand écran"
+      }
+    ]
+  },
+  "Todo App": {
+    "titre": "Application To-do",
+    "modalClass": "modal-todo",
+    "id": "todo",
+    "lien": "https://to-do-ten-flame.vercel.app",
+    "i18n": {
+      "title": "projects.todo.title",
+      "desc": "projects.todo.desc",
+      "techs": "projects.todo.techs"
+    },
+    "dossierImgs": "Todo",
+    "modalHeight": "modal-fixed-height",
+    "imgs": [
+      {
+        "name": "Todo-sm.jpeg",
+        "altText": "App Todo sur petit écran"
+      },
+      {
+        "name": "Todo-md.jpeg",
+        "altText": "App Todo sur écran moyen"
+      },
+      { "name": "Todo-modal.jpeg", "altText": "Détails de la tache" },
+      {
+        "name": "Todo-xl.jpeg",
+        "altText": "App Todo sur écran extra-large"
+      }
+    ]
+  },
+  "Formulaire": {
+    "titre": "Formulaire de connexion",
+    "id": "formulaire",
+    "i18n": {
+      "title": "projects.form.title",
+      "desc": "projects.form.desc",
+      "techs": "projects.form.techs"
+    }
+  },
+  "GPI": {
+    "titre": "Application GPI",
+    "modalClass": "modal-gpi",
+    "id": "gpi",
+    "i18n": {
+      "title": "projects.gpi.title",
+      "desc": "projects.gpi.desc",
+      "techs": "projects.gpi.techs"
+    },
+    "dossierImgs": "GPI",
+    "imgs": [
+      {
+        "name": "GPI-login.png",
+        "altText": "Page de connexion"
+      },
+      { "name": "GPI-Accueil.png", "altText": "Page d'accueil" },
+      {
+        "name": "GPI-materiels.png",
+        "altText": "Liste des matériels"
+      },
+      { "name": "GPI-TM.png", "altText": "Type de matériel" },
+      {
+        "name": "GPI-Marque.png",
+        "altText": "Liste des marques"
+      },
+      {
+        "name": "GPI-Fournisseur.png",
+        "altText": "Liste des fournisseur"
+      }
+    ]
+  }
+}
