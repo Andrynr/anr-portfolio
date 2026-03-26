@@ -169,6 +169,25 @@ body {
   background-color: #4441;
 }
 
+.btn-custom {
+  transition: all 0.25s ease;
+  border-radius: 8px;
+}
+.btn-custom:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+.btn-custom::after {
+  content: "";
+  posution: absolute;
+  inset: 0;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+.btn-custom:hover::after {
+  opacity: 1;
+}
 .modal-body {
   background-color: #c0c0c080;
 }
@@ -210,6 +229,18 @@ body {
 
 .project-card:hover {
   background-color: rgb(206, 211, 216);
+}
+
+/* Colors */
+/* Les boutons de projets */
+.btn-outline-warning.btn-custom::after {
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.6);
+}
+.btn-outline-dark.btn-custom::after {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+.btn-outline-info.btn-custom::after {
+  box-shadow: 0 0 12px rgba(13, 202, 240, 0.6);
 }
 
 /*Colors with Dark mode*/

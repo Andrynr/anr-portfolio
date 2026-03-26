@@ -12,7 +12,6 @@ const loadProjects = async () => {
       <div class="card-body c-b-projet" id="${projet.id}">
         <h5 class="card-title" data-i18n="${projet.i18n.title}"></h5>
         <p data-i18n="${projet.i18n.desc}"></p>
-
         ${
           projet.EC
             ? `<div class="progress" title="Projet en cours">
@@ -31,24 +30,39 @@ const loadProjects = async () => {
         }
       </div>
       <div class="card-footer row px-0">
-        <span class="w-auto col-sm-6 pe-0" data-i18n="${
+        <span class="w-auto col-sm-6 pe-0 small text-muted" data-i18n="${
           projet.i18n.techs
         }"></span>
-        <div class="col d-flex px-1">
-          <button type="button" class="btn btn-info btn-sm ms-auto preview ${
-            !projet.dossierImgs ? "disabled" : ""
-          }" data-title="${nom}">
-            <span data-i18n="btn.preview"></span>
-          </button>
-          <a
+        <div class="col d-flex px-1 justify-content-end">
+          ${
+            projet.dossierImgs
+              ? `<button type="button" class="btn btn-outline-info btn-sm btn-custom ms-auto preview 
+          " data-title="${nom}">
+            <span class="d-none d-sm-inline">👁️ </span><span data-i18n="btn.preview"></span>
+          </button>`
+              : ""
+          }
+          ${
+            projet.lien
+              ? `<a
             href="${projet.lien}"
-            class="btn btn-warning btn-sm mx-1 ${
-              !projet.lien ? "disabled" : ""
-            }"
+            class="btn btn-outline-warning btn-custom btn-sm mx-1 
+            "
             target="_blank"
             title="Voir le démo en ligne"
             aria-label="Voir le démo en ligne"
-          ><span data-i18n="btn.demo"></span></a>
+          ><span class="d-none d-sm-inline">🚀 </span><span data-i18n="btn.demo"></span></a>`
+              : ""
+          }
+          ${
+            projet.git
+              ? `
+          <a href="${projet.git}" class="btn btn-outline-dark btn-custom btn-sm" target="_blank" title="Code Source">
+            <span class="d-none d-md-flex">&lt;/&gt; </span>Code</a>
+          `
+              : ""
+          }
+
         </div>
       </div>
     </div>`
