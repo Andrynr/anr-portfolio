@@ -2,7 +2,7 @@
   "Spending Tracker": {
     "titre": "Spending Tracker",
     "id": "spendingTracker",
-    "git": "https//github.com/Andrynr/Spending-tracker",
+    "git": "https://github.com/Andrynr/Spending-tracker",
     "EC": "true",
     "progress": "60",
     "lien": "https://spending-tracker-ten-flame.vercel.app",
@@ -56,7 +56,7 @@
     "titre": "Application To-do",
     "modalClass": "modal-todo",
     "id": "todo",
-    "git": "https//github.com/Andrynr/To-do",
+    "git": "https://github.com/Andrynr/To-do",
     "lien": "https://to-do-ten-flame.vercel.app",
     "i18n": {
       "title": "projects.todo.title",
