@@ -51,8 +51,9 @@ export const loadCarousel = (projet) => {
         <div
         class="carousel-item mx-auto ${
           i === 0 ? "active" : ""
-        }"><img src="images/${projet.dossierImgs}/${img.name}" 
-        loading="lazy" class="img-fluid rounded d-block mx-auto" 
+        }"><img src="images/${projet.dossierImgs}/${
+            img.name
+          }" class="img-fluid rounded d-block mx-auto" 
         alt="${img.altText}"
         />
         </div>
