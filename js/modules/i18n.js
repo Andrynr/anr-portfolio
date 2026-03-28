@@ -49,6 +49,9 @@ const I18N = (function () {
         el.textContent = text;
       }
     });
+
+    // Choix du CV
+    root.querySelector("#cv").href = t("contact.cv");
   }
 
   /* Gère le select pour langues */
