@@ -18,420 +18,447 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="css/loading.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-md sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="">Romuald Dev</a>
-        <div class="text-center themeModify">
-          <button
-            id="toggleTheme"
-            class="btn btn-sm bg-transparent btn-outline-gw"
-          >
-            <span class="ombre trans-2" id="themeIcon">☀</span>
-          </button>
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navigation"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          id="navbar-toggler"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navigation"
-        >
-          <ul class="navbar-nav d-flex">
-            <li class="nav-item">
-              <a class="nav-link" href="#aboutMe" data-i18n="nav.about"
-                >À PROPOS</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projets" data-i18n="nav.projects"
-                >MES PROJETS</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#formations" data-i18n="nav.education"
-                >FORMATION</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#competences" data-i18n="nav.skills"
-                >MES COMPETENCES</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact" data-i18n="nav.contact"
-                >ME CONTACTER</a
-              >
-            </li>
-            <li>
-              <div class="ms-2 p-1">
-                <select
-                  id="langSelect"
-                  class="langSelect form-select form-select-sm mx-auto w-auto"
-                  aria-label="Language selector"
-                ></select>
-              </div>
-            </li>
-          </ul>
-        </div>
+    <div class="" id="intro">
+      <div class="background"></div>
+      <div class="particles"></div>
+
+      <div class="content">
+        <h1 class="display-2">Romuald</h1>
+        <h4>Welcome to my universe</h4>
+        <p
+          class="greeting"
+          id="greeting"
+          aria-live="polite"
+          data-i18n="greeting"
+        ></p>
       </div>
-    </nav>
-
-    <div class="flake f1"></div>
-    <div class="flake f2"></div>
-    <div class="flake f3"></div>
-    <div class="flake f4"></div>
-    <div class="flake f5"></div>
-    <div class="flake f6"></div>
-
-    <header class="text-center py-5">
-      <h1 class="display-4 text-primary mt-3" data-i18n="header.welcome">
-        Bienvenue
-      </h1>
-      <p class="typewriter px-2">
-        <span id="phraseIntro" class="font-monospace"></span
-        ><span class="curseur"></span>
-      </p>
-    </header>
-    <div class="mx-auto px-2 px-md-3 px-xl-4 px-xxl-5">
-      <div class="row gx-md-2 gx-xl-4">
-        <div class="col-md-7">
-          <!-- Section about me -->
-          <section class="fade-in card hov-scale mb-2" id="aboutMe">
-            <div class="card-header">
-              <h2 data-i18n="about.title">À propos</h2>
-            </div>
-            <div class="card-body">
-              <p class="card-text">
-                <span data-i18n="about.p1"
-                  >Bonjour ! je suis Romuald, un développeur web junior
-                  passionné par la création de sites modernes et
-                  fonctionnels.</span
-                >
-                <br />
-                <span data-i18n="about.techs"
-                  >J'utilise des technologies comme</span
-                >
-                <span class="text-info fw-light"
-                  >HTML, CSS3, JavaScript, PHP</span
-                >
-                ,<span data-i18n="about.tools"> et des outils comme</span>
-                <span class="text-info fw-light">
-                  Laravel, React, Bootstrap</span
-                >.
-              </p>
-              <p class="card-text">
-                <span data-i18n="about.p2"
-                  >Vous avez un projet web ? Je peux le transformer en un site
-                  responsive, fonctionnel et adapté à vos besoins : création sur
-                  mesure, amélioration d'un site existant ou correction de
-                  bugs.</span
-                >
-              </p>
-              <p>
-                <span data-i18n="about.p3"
-                  >Autonome, curieux et en constante progression, je suis
-                  toujours prêt à relever de nouveaux défis avec
-                  enthousiasme.</span
-                >
-              </p>
-            </div>
-          </section>
-
-          <!-- Mes projets -->
-          <section id="projets">
-            <div class="card my-3">
-              <h2 class="card-header" data-i18n="projects.title">
-                Mes projets
-              </h2>
-              <div class="card-body row mx-auto p-1" id="allProjects"></div>
-            </div>
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="modal"
-              tabindex="-1"
-              aria-labelledby="modalLabel"
-              aria-hidden="true"
+    </div>
+    <div id="main-content">
+      <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="">Romuald Dev</a>
+          <div class="text-center themeModify">
+            <button
+              id="toggleTheme"
+              class="btn btn-sm bg-transparent btn-outline-gw"
             >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel"></h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body" id="modal-body">
-                    <div
-                      id="carouselInModal"
-                      class="carousel slide"
-                      data-bs-ride="carousel"
-                    >
+              <span class="ombre trans-2" id="themeIcon">☀</span>
+            </button>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navigation"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            id="navbar-toggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navigation"
+          >
+            <ul class="navbar-nav d-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="#aboutMe" data-i18n="nav.about"
+                  >À PROPOS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projets" data-i18n="nav.projects"
+                  >MES PROJETS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#formations" data-i18n="nav.education"
+                  >FORMATION</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#competences" data-i18n="nav.skills"
+                  >MES COMPETENCES</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact" data-i18n="nav.contact"
+                  >ME CONTACTER</a
+                >
+              </li>
+              <li>
+                <div class="ms-2 p-1">
+                  <select
+                    id="langSelect"
+                    class="langSelect form-select form-select-sm mx-auto w-auto"
+                    aria-label="Language selector"
+                  ></select>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="flake f1"></div>
+      <div class="flake f2"></div>
+      <div class="flake f3"></div>
+      <div class="flake f4"></div>
+      <div class="flake f5"></div>
+      <div class="flake f6"></div>
+
+      <header class="text-center py-5">
+        <h1 class="display-4 text-primary mt-3" data-i18n="header.welcome">
+          Bienvenue
+        </h1>
+        <p class="typewriter px-2">
+          <span id="phraseIntro" class="font-monospace"></span
+          ><span class="curseur"></span>
+        </p>
+      </header>
+      <div class="mx-auto px-2 px-md-3 px-xl-4 px-xxl-5">
+        <div class="row gx-md-2 gx-xl-4">
+          <div class="col-md-7">
+            <!-- Section about me -->
+            <section class="fade-in card hov-scale mb-2" id="aboutMe">
+              <div class="card-header">
+                <h2 data-i18n="about.title">À propos</h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <span data-i18n="about.p1"
+                    >Bonjour ! je suis Romuald, un développeur web junior
+                    passionné par la création de sites modernes et
+                    fonctionnels.</span
+                  >
+                  <br />
+                  <span data-i18n="about.techs"
+                    >J'utilise des technologies comme</span
+                  >
+                  <span class="text-info fw-light"
+                    >HTML, CSS3, JavaScript, PHP</span
+                  >
+                  ,<span data-i18n="about.tools"> et des outils comme</span>
+                  <span class="text-info fw-light">
+                    Laravel, React, Bootstrap</span
+                  >.
+                </p>
+                <p class="card-text">
+                  <span data-i18n="about.p2"
+                    >Vous avez un projet web ? Je peux le transformer en un site
+                    responsive, fonctionnel et adapté à vos besoins : création
+                    sur mesure, amélioration d'un site existant ou correction de
+                    bugs.</span
+                  >
+                </p>
+                <p>
+                  <span data-i18n="about.p3"
+                    >Autonome, curieux et en constante progression, je suis
+                    toujours prêt à relever de nouveaux défis avec
+                    enthousiasme.</span
+                  >
+                </p>
+              </div>
+            </section>
+
+            <!-- Mes projets -->
+            <section id="projets">
+              <div class="card my-3">
+                <h2 class="card-header" data-i18n="projects.title">
+                  Mes projets
+                </h2>
+                <div class="card-body row mx-auto p-1" id="allProjects"></div>
+              </div>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="modal"
+                tabindex="-1"
+                aria-labelledby="modalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalLabel"></h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
                       <div
-                        class="carousel-indicators"
-                        id="carousel-indicators"
-                      ></div>
-                      <div class="carousel-inner" id="carousel-inner"></div>
-                      <button
-                        class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselInModal"
-                        data-bs-slide="prev"
+                        id="carouselInModal"
+                        class="carousel slide"
+                        data-bs-ride="carousel"
                       >
-                        <span
-                          class="carousel-control-prev-icon"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button
-                        class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselInModal"
-                        data-bs-slide="next"
-                      >
-                        <span
-                          class="carousel-control-next-icon"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
+                        <div
+                          class="carousel-indicators"
+                          id="carousel-indicators"
+                        ></div>
+                        <div class="carousel-inner" id="carousel-inner"></div>
+                        <button
+                          class="carousel-control-prev"
+                          type="button"
+                          data-bs-target="#carouselInModal"
+                          data-bs-slide="prev"
+                        >
+                          <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                          class="carousel-control-next"
+                          type="button"
+                          data-bs-target="#carouselInModal"
+                          data-bs-slide="next"
+                        >
+                          <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </div>
+            </section>
+          </div>
 
-        <div class="col-md-5">
-          <!-- Mes formations -->
-          <section class="fade-in hov-scale" id="myFormations">
-            <div id="formations" class="card mb-3">
-              <div class="card-header">
-                <h2 data-i18n="formations.title">Mes formations</h2>
+          <div class="col-md-5">
+            <!-- Mes formations -->
+            <section class="fade-in hov-scale" id="myFormations">
+              <div id="formations" class="card mb-3">
+                <div class="card-header">
+                  <h2 data-i18n="formations.title">Mes formations</h2>
+                </div>
+                <div class="card-body row m-0 gx-xl-1">
+                  <div class="col-xl-6">
+                    <h5 class="card-title" data-i18n="formations.cntemad.title">
+                      CNTEMAD - Genie logiciel et base de donnée
+                    </h5>
+                    <p
+                      class="text-black-50"
+                      data-i18n="formations.cntemad.degree"
+                    >
+                      Diplôme de licence
+                    </p>
+                    <p>
+                      <span data-i18n="formations.cntemad.desc"
+                        >Une formation qui m'a permis d'acquérir des
+                        compétences</span
+                      >
+                      <b
+                        title="programmation, gestion de base de données"
+                        data-i18n="formations.cntemad.tech_skills"
+                        >techniques en informatique</b
+                      >,
+                      <span data-i18n="formations.cntemad.transition"
+                        >ainsi que des compétences</span
+                      >
+                      <b
+                        title="autodidacte, autonomie, sens d'organisation, esprit d'analyse, ..."
+                        data-i18n="formations.cntemad.gen_skills"
+                        >générales</b
+                      >.
+                    </p>
+                  </div>
+                  <div class="vr mx-auto d-none d-xl-block"></div>
+                  <hr class="d-xl-none" />
+                  <div class="col-xl-5">
+                    <h5 data-i18n="formations.lvm.title">
+                      Lycée Victor Miadana
+                    </h5>
+                    <p class="text-black-50" data-i18n="formations.lvm.degree">
+                      Baccalauréat Série Scientifique
+                    </p>
+                    <p data-i18n="formations.lvm.desc">
+                      Un lycée que j'ai fréquenté de la seconde à la terminale.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="card-body row m-0 gx-xl-1">
-                <div class="col-xl-6">
-                  <h5 class="card-title" data-i18n="formations.cntemad.title">
-                    CNTEMAD - Genie logiciel et base de donnée
-                  </h5>
-                  <p
-                    class="text-black-50"
-                    data-i18n="formations.cntemad.degree"
+            </section>
+            <!-- Mes competences -->
+            <section class="fade-in" id="competences">
+              <div class="card">
+                <h2 class="card-header" data-i18n="skills.title">
+                  Mes competences
+                </h2>
+                <div class="g-2 card-body row m-0">
+                  <div
+                    class="fade-in hov-scale col-xxl-6 d-flex flex-column justify-content-between"
                   >
-                    Diplôme de licence
-                  </p>
-                  <p>
-                    <span data-i18n="formations.cntemad.desc"
-                      >Une formation qui m'a permis d'acquérir des
-                      compétences</span
-                    >
-                    <b
-                      title="programmation, gestion de base de données"
-                      data-i18n="formations.cntemad.tech_skills"
-                      >techniques en informatique</b
-                    >,
-                    <span data-i18n="formations.cntemad.transition"
-                      >ainsi que des compétences</span
-                    >
-                    <b
-                      title="autodidacte, autonomie, sens d'organisation, esprit d'analyse, ..."
-                      data-i18n="formations.cntemad.gen_skills"
-                      >générales</b
-                    >.
-                  </p>
-                </div>
-                <div class="vr mx-auto d-none d-xl-block"></div>
-                <hr class="d-xl-none" />
-                <div class="col-xl-5">
-                  <h5 data-i18n="formations.lvm.title">Lycée Victor Miadana</h5>
-                  <p class="text-black-50" data-i18n="formations.lvm.degree">
-                    Baccalauréat Série Scientifique
-                  </p>
-                  <p data-i18n="formations.lvm.desc">
-                    Un lycée que j'ai fréquenté de la seconde à la terminale.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Mes competences -->
-          <section class="fade-in" id="competences">
-            <div class="card">
-              <h2 class="card-header" data-i18n="skills.title">
-                Mes competences
-              </h2>
-              <div class="g-2 card-body row m-0">
-                <div
-                  class="fade-in hov-scale col-xxl-6 d-flex flex-column justify-content-between"
-                >
-                  <h4 class="card-title mb-3" data-i18n="skills.language">
-                    Langage informatique
-                  </h4>
-                  <ul class="list-group">
-                    <li class="list-group-item">HTML</li>
-                    <li class="list-group-item">CSS3</li>
-                    <li class="list-group-item">JavaScript</li>
-                    <li class="list-group-item">PHP</li>
-                    <li class="list-group-item">SQL</li>
-                  </ul>
-                </div>
-                <div
-                  class="fade-in hov-scale col d-flex flex-column justify-content-between"
-                >
-                  <h4 class="card-title" data-i18n="skills.other">
-                    Framework, Outils, Bibliothèque
-                  </h4>
-                  <ul class="list-group">
-                    <li class="list-group-item" title="Framework back-end">
-                      Laravel
-                    </li>
-                    <li class="list-group-item" title="Bibliothèque front-end">
-                      React
-                    </li>
-                    <li
-                      class="list-group-item"
-                      title="Framework frontend (styles)"
-                    >
-                      Bootsrap
-                    </li>
-                    <li class="list-group-item" title="Version control">Git</li>
-                    <li
-                      class="list-group-item"
-                      title="Gestion de base de données"
-                    >
-                      MySQL
-                    </li>
-                  </ul>
+                    <h4 class="card-title mb-3" data-i18n="skills.language">
+                      Langage informatique
+                    </h4>
+                    <ul class="list-group">
+                      <li class="list-group-item">HTML</li>
+                      <li class="list-group-item">CSS3</li>
+                      <li class="list-group-item">JavaScript</li>
+                      <li class="list-group-item">PHP</li>
+                      <li class="list-group-item">SQL</li>
+                    </ul>
+                  </div>
+                  <div
+                    class="fade-in hov-scale col d-flex flex-column justify-content-between"
+                  >
+                    <h4 class="card-title" data-i18n="skills.other">
+                      Framework, Outils, Bibliothèque
+                    </h4>
+                    <ul class="list-group">
+                      <li class="list-group-item" title="Framework back-end">
+                        Laravel
+                      </li>
+                      <li
+                        class="list-group-item"
+                        title="Bibliothèque front-end"
+                      >
+                        React
+                      </li>
+                      <li
+                        class="list-group-item"
+                        title="Framework frontend (styles)"
+                      >
+                        Bootsrap
+                      </li>
+                      <li class="list-group-item" title="Version control">
+                        Git
+                      </li>
+                      <li
+                        class="list-group-item"
+                        title="Gestion de base de données"
+                      >
+                        MySQL
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <!-- Formulaire de proposition de -->
-      <section class="fade-in" id="proposition">
-        <form
-          action="https://formsubmit.co/3a2a6c21a3a296ef33d69df25c21b0a3"
-          method="POST"
-          class="p-3 mt-3 row gx-md-3 border rounded shadow-lg"
-        >
-          <h5 class="mb-3" data-i18n="proposition.title">Proposition</h5>
-          <p data-i18n="proposition.p1">
-            Un projet, un ajustement de votre site ou juste corriger des bugs?
-            Vous pouvez remplir ce formulaire pour me le faire savoir.
+      <div class="container">
+        <!-- Formulaire de proposition de -->
+        <section class="fade-in" id="proposition">
+          <form
+            action="https://formsubmit.co/3a2a6c21a3a296ef33d69df25c21b0a3"
+            method="POST"
+            class="p-3 mt-3 row gx-md-3 border rounded shadow-lg"
+          >
+            <h5 class="mb-3" data-i18n="proposition.title">Proposition</h5>
+            <p data-i18n="proposition.p1">
+              Un projet, un ajustement de votre site ou juste corriger des bugs?
+              Vous pouvez remplir ce formulaire pour me le faire savoir.
+            </p>
+            <div class="col-md-3 my-auto">
+              <div class="mb-3">
+                <label
+                  for="name"
+                  class="form-label"
+                  data-i18n="proposition.name"
+                  >Nom</label
+                >
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="email"
+                  class="form-label"
+                  data-i18n="proposition.email"
+                  >Email</label
+                >
+                <input type="email" name="email" id="email" required />
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="mb-3">
+                <label
+                  for="message"
+                  class="form-label"
+                  data-i18n="proposition.message"
+                  >Message</label
+                >
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Désactive le CAPTCHA -->
+            <input type="hidden" name="_captcha" value="false" />
+
+            <!-- Redirection après l'envoi -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://andrynr.github.io/anr-portfolio/pages/merci.html"
+            />
+            <div class="col-2 mt-auto">
+              <button
+                type="submit"
+                class="btn btn-primary ms-auto mb-md-3"
+                data-i18n="proposition.send"
+              >
+                Envoyer
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <section id="contact">
+        <div class="text-center footer">
+          <h3 class="mt-2" data-i18n="contact.title">Me contacter</h3>
+          <ul class="list-unstyled">
+            <li>
+              <a
+                href="https://andrynr.github.io/anr-portfolio/documents/CV-ANDRIAMIARISOA_Nomenjanahary_Romuald.pdf"
+                download
+                id="cv"
+                data-i18n="contact.download_cv"
+                >Télécharger mon CV</a
+              >
+            </li>
+            <li><span>+261347549319</span></li>
+            <li>
+              <a
+                href="https://wa.me/261333700552?text=Bonjour%20je%20veux%20vous%20proposer%20un%20projet"
+                target="_blank"
+                title="Voir le démo en ligne"
+                aria-label="Voir le démo en ligne"
+                data-i18n="contact.whatsapp"
+                >WhatsApp</a
+              >
+            </li>
+            <li><span class="mail">romualdnomenjanaharyrn@gmail.com</span></li>
+          </ul>
+          <p class="text-center py-4">
+            &copy; 2025 Romuald.
+            <span data-i18n="copyright">Tous droits réservés.</span>
           </p>
-          <div class="col-md-3 my-auto">
-            <div class="mb-3">
-              <label for="name" class="form-label" data-i18n="proposition.name"
-                >Nom</label
-              >
-              <input type="text" name="name" id="name" required />
-            </div>
-            <div class="mb-3">
-              <label
-                for="email"
-                class="form-label"
-                data-i18n="proposition.email"
-                >Email</label
-              >
-              <input type="email" name="email" id="email" required />
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="mb-3">
-              <label
-                for="message"
-                class="form-label"
-                data-i18n="proposition.message"
-                >Message</label
-              >
-              <textarea
-                class="form-control"
-                id="message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
-            </div>
-          </div>
-
-          <!-- Désactive le CAPTCHA -->
-          <input type="hidden" name="_captcha" value="false" />
-
-          <!-- Redirection après l'envoi -->
-          <input
-            type="hidden"
-            name="_next"
-            value="https://andrynr.github.io/anr-portfolio/pages/merci.html"
-          />
-          <div class="col-2 mt-auto">
-            <button
-              type="submit"
-              class="btn btn-primary ms-auto mb-md-3"
-              data-i18n="proposition.send"
-            >
-              Envoyer
-            </button>
-          </div>
-        </form>
+        </div>
       </section>
     </div>
-    <section id="contact">
-      <div class="text-center footer">
-        <h3 class="mt-2" data-i18n="contact.title">Me contacter</h3>
-        <ul class="list-unstyled">
-          <li>
-            <a
-              href="https://andrynr.github.io/anr-portfolio/documents/CV-ANDRIAMIARISOA_Nomenjanahary_Romuald.pdf"
-              download
-              id="cv"
-              data-i18n="contact.download_cv"
-              >Télécharger mon CV</a
-            >
-          </li>
-          <li><span>+261347549319</span></li>
-          <li>
-            <a
-              href="https://wa.me/261333700552?text=Bonjour%20je%20veux%20vous%20proposer%20un%20projet"
-              target="_blank"
-              title="Voir le démo en ligne"
-              aria-label="Voir le démo en ligne"
-              data-i18n="contact.whatsapp"
-              >WhatsApp</a
-            >
-          </li>
-          <li><span class="mail">romualdnomenjanaharyrn@gmail.com</span></li>
-        </ul>
-        <p class="text-center py-4">
-          &copy; 2025 Romuald.
-          <span data-i18n="copyright">Tous droits réservés.</span>
-        </p>
-      </div>
-    </section>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     ></script>
-    <script src="bootstrap.bundle.min.js"></script>
     <script type="module" src="js/index.js"></script>
   </body>
 </html>

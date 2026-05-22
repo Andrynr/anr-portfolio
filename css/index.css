@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   margin: 0;
   padding: 0;
-  visibility: hidden;
 }
+body {
+  overflow: hidden;
+}
+
 /* Navigation */
 .logo {
   width: 2rem;
@@ -134,8 +140,27 @@ body {
   z-index: 1;
 }
 
-/*Couleur*/
-body {
+.btn-custom {
+  transition: all 0.25s ease;
+  border-radius: 8px;
+}
+.btn-custom:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+.btn-custom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+.btn-custom:hover::after {
+  opacity: 1;
+}
+/*Couleurs*/
+#main-content {
   background-color: rgb(176 197 247 / 56%);
 }
 
@@ -157,37 +182,19 @@ body {
   box-shadow: -0.1em 0.1em 5px 2px #c0c0c0;
 }
 
-.card-header {
-  background-color: #0aa1c880;
+section .card-header {
+  background-color: #539daf80;
 }
 
 .card-body:not(.c-b-projet) {
   background-color: #f0f8ff80;
 }
 
-.project-card {
+.card .project-card {
   background-color: #4441;
 }
 
-.btn-custom {
-  transition: all 0.25s ease;
-  border-radius: 8px;
-}
-.btn-custom:hover {
-  transform: translateY(-2px) scale(1.03);
-}
-.btn-custom::after {
-  content: "";
-  posution: absolute;
-  inset: 0;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  z-index: -1;
-}
-.btn-custom:hover::after {
-  opacity: 1;
-}
+/* Couleur des Modals */
 .modal-body {
   background-color: #c0c0c080;
 }
@@ -219,7 +226,7 @@ body {
   box-shadow: -0.1em 0.1em 5px 2px #c0c0c0;
 }
 
-.list-group-item {
+#competences .list-group-item {
   background-color: #fcfaee50;
 }
 
@@ -231,7 +238,6 @@ body {
   background-color: rgb(206, 211, 216);
 }
 
-/* Colors */
 /* Les boutons de projets */
 .btn-outline-warning.btn-custom::after {
   box-shadow: 0 0 12px rgba(255, 193, 7, 0.6);
