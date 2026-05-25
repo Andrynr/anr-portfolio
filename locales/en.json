@@ -106,5 +106,19 @@
     "msg": "Your message was sent successfully ✨. I will answer you shortly 🙇‍♂",
     "bye": "Until next time!",
     "link": "Go back"
-  }
+  },
+  "msgConsole": [
+    {
+      "text": "Welcome behind the scenes.",
+      "style": "color:#7c3aed;font-size:14px;font-weight:bold;"
+    },
+    {
+      "text": "Curious minds always open the console 👀",
+      "style": "color:#888;font-size:12px;"
+    },
+    {
+      "text": "If you'd like to collaborate: romualdnomenjanaharyrn@gmail.com",
+      "style": "color:#7c3aed"
+    }
+  ]
 }

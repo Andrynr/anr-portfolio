@@ -106,5 +106,19 @@
     "msg": "Votre message a bien été envoyé ✨. Je vous répondrai dès que possible. 🙇‍♂",
     "bye": "À bientôt !",
     "link": "Retour à l'accueil"
-  }
+  },
+  "msgConsole": [
+    {
+      "text": "Bienvenue dans les coulisses.",
+      "style": "color:#7c3aed;font-size:14px;font-weight:bold;"
+    },
+    {
+      "text": "Build with HTML + CSS + JS",
+      "style": "color:#888;font-size:12px"
+    },
+    {
+      "text": "Si tu recrutes ou veux discuter : romualdnomenjanaharyrn@gmail.com",
+      "style": "color:#00ff99;font-weight:bold;"
+    }
+  ]
 }

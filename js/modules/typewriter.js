@@ -106,6 +106,11 @@ export const initMultiLang = async () => {
     await I18N.load(getLang());
 
     I18N.initSelector("langSelect");
+
+    const msgConsole = I18N.t("msgConsole");
+    msgConsole.forEach((msg) => {
+      console.log(`%c${msg.text}`, msg.style);
+    });
   } catch (e) {
     console.warn("i18n load failed", e);
   }

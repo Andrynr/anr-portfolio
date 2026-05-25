@@ -1,13 +1,14 @@
-#loading-intro {
-  height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-  color: cornflowerblue;
+#intro {
   position: fixed;
   display: flex;
   inset: 0;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: cornflowerblue;
   opacity: 1;
+  scrol
 
   transition: opacity 1s ease;
 }
