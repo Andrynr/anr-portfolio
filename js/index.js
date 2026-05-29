@@ -7,8 +7,11 @@ import initTheme from "./modules/theme.js";
 import { initMultiLang, initTypewriter } from "./modules/typewriter.js";
 import { initLoading } from "./modules/loading.js";
 import { switchContent } from "./modules/switchContent.js";
+import { trackVisit } from "./modules/firebase/analytics.js";
 
 async function initApp() {
+  trackVisit();
+
   initLoading();
 
   await loadProjects(); // Charge les projets
