@@ -1,4 +1,4 @@
-#intro {
+div#intro {
   position: fixed;
   display: flex;
   inset: 0;
@@ -8,7 +8,7 @@
   font-family: Arial, Helvetica, sans-serif;
   color: cornflowerblue;
   opacity: 1;
-  scrol
+  scroll-behavior: unset;
 
   transition: opacity 1s ease;
 }
