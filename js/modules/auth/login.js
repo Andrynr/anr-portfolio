@@ -4,11 +4,15 @@ import {
   signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { auth } from "../firebase/firebase.js";
+import { hideSpinner, spinner } from "../loader.js";
 
 const form = document.getElementById("loginForm");
+const spContainer = document.getElementById("loader");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  spinner(spContainer);
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
@@ -17,9 +21,10 @@ form.addEventListener("submit", async (e) => {
     await signInWithEmailAndPassword(auth, email, password);
 
     window.location.href = "/pages/stats.html";
-    console.log(window.location.href);
   } catch (error) {
     alert(error.message);
+  } finally {
+    hideSpinner();
   }
 });
 
@@ -29,11 +34,14 @@ const provider = new GoogleAuthProvider();
 const loginGgBtn = document.getElementById("btnGg");
 
 loginGgBtn.addEventListener("click", async () => {
+  spinner(spContainer);
   try {
     await signInWithPopup(auth, provider);
 
     window.location.href = "/pages/stats.html";
   } catch (error) {
     console.log(error);
+  } finally {
+    hideSpinner();
   }
 });

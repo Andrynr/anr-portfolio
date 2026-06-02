@@ -5,7 +5,7 @@ import loadProjects from "./modules/projects.js";
 import initScrollAnim from "./modules/scrollAnimations.js";
 import initTheme from "./modules/theme.js";
 import { initMultiLang, initTypewriter } from "./modules/typewriter.js";
-import { initLoading } from "./modules/loading.js";
+import { initLoading } from "./modules/preloader.js";
 import { switchContent } from "./modules/switchContent.js";
 import { trackVisit } from "./modules/firebase/analytics.js";
 

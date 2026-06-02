@@ -1,10 +1,12 @@
 import { getVisits } from "../modules/firebase/analytics.js";
 import { formatTime } from "../utils/time.js";
 import { requireAuth, logOut } from "../modules/auth/admin.js";
+import { hideSpinner, spinner } from "../modules/loader.js";
 
 const countElement = document.getElementById("count");
 const visitsElement = document.getElementById("visits");
 
+spinner();
 // Récupère les visits
 const visits = (await getVisits()) || [];
 
@@ -126,10 +128,17 @@ function renderVisitsTable(allVisits, container, page = 1, size = pageSize) {
 requireAuth((user) =>
   renderVisitsTable(visits, visitsElement, currentPage, pageSize)
 );
-
+hideSpinner();
 // Bouton de déconnexion
 const logoutBtn = document.getElementById("logoutBtn");
 
 logoutBtn.addEventListener("click", async () => {
-  await logOut();
+  spinner();
+  try {
+    await logOut();
+  } catch (error) {
+    console.log(error);
+  } finally {
+    hideSpinner();
+  }
 });
