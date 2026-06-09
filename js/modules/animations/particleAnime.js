@@ -1,4 +1,4 @@
-import { particleElmnt } from "../../data/constants.js";
+import { particleElmnt } from "../../../data/constants.js";
 
 export default () => {
   const particlesContainer = document.querySelector(".particles");

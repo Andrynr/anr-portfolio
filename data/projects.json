@@ -3,8 +3,6 @@
     "titre": "Spending Tracker",
     "id": "spendingTracker",
     "git": "https://github.com/Andrynr/Spending-tracker",
-    "EC": "true",
-    "progress": "60",
     "lien": "https://spending-tracker-ten-flame.vercel.app",
     "i18n": {
       "title": "projects.spending.title",

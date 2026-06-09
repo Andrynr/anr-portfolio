@@ -13,7 +13,7 @@ const loadProjects = async () => {
         <h5 class="card-title" data-i18n="${projet.i18n.title}"></h5>
         <p data-i18n="${projet.i18n.desc}"></p>
         ${
-          projet.EC
+          projet.EnCours
             ? `<div class="progress" title="Projet en cours">
   <div
     class="progress-bar bg-primary bg-opacity-25 progress-bar-striped progress-bar-animated"
@@ -65,7 +65,7 @@ const loadProjects = async () => {
 
         </div>
       </div>
-    </div>`
+    </div>`,
     )
     .join("");
 };

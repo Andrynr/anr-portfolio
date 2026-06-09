@@ -1,5 +1,5 @@
-import { majPhrases, startTypewriter } from "./typewriter.js";
-import particleAnime from "./particleAnime.js";
+import { majPhrases, startTypewriter } from "./animations/typewriter.js";
+import particleAnime from "./animations/particleAnime.js";
 
 particleAnime();
 

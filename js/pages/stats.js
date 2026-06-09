@@ -1,7 +1,7 @@
 import { getVisits } from "../modules/firebase/analytics.js";
 import { formatTime } from "../utils/time.js";
 import { requireAuth, logOut } from "../modules/auth/admin.js";
-import { hideSpinner, spinner } from "../modules/loader.js";
+import { hideSpinner, spinner } from "../modules/animations/loader.js";
 
 const countElement = document.getElementById("count");
 const visitsElement = document.getElementById("visits");
@@ -94,12 +94,12 @@ function renderVisitsTable(allVisits, container, page = 1, size = pageSize) {
   const prev = document.createElement("button");
   prev.type = "button";
   prev.className = "btn btn-sm btn-outline-primary me-2";
-  (prev.textContent = "Préc."), (prev.disabled = current <= 1);
+  ((prev.textContent = "Préc."), (prev.disabled = current <= 1));
 
   const next = document.createElement("button");
   next.type = "button";
   next.className = "btn btn-sm btn-outline-primary";
-  (next.textContent = "Suiv."), (next.disabled = current >= totalPages);
+  ((next.textContent = "Suiv."), (next.disabled = current >= totalPages));
 
   prev.addEventListener("click", () => {
     if (current > 1) {
@@ -126,7 +126,7 @@ function renderVisitsTable(allVisits, container, page = 1, size = pageSize) {
 
 // initial render
 requireAuth((user) =>
-  renderVisitsTable(visits, visitsElement, currentPage, pageSize)
+  renderVisitsTable(visits, visitsElement, currentPage, pageSize),
 );
 hideSpinner();
 // Bouton de déconnexion

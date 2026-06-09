@@ -4,7 +4,7 @@ import {
   signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 import { auth } from "../firebase/firebase.js";
-import { hideSpinner, spinner } from "../loader.js";
+import { hideSpinner, spinner } from "../animations/loader.js";
 
 const form = document.getElementById("loginForm");
 const spContainer = document.getElementById("loader");

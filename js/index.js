@@ -2,9 +2,12 @@ import initCarousel from "./modules/carousel.js";
 import initModal from "./modules/modal.js";
 import initNavBar from "./modules/navBar.js";
 import loadProjects from "./modules/projects.js";
-import initScrollAnim from "./modules/scrollAnimations.js";
+import initScrollAnim from "./modules/animations/scrollAnimations.js";
 import initTheme from "./modules/theme.js";
-import { initMultiLang, initTypewriter } from "./modules/typewriter.js";
+import {
+  initMultiLang,
+  initTypewriter,
+} from "./modules/animations/typewriter.js";
 import { initLoading } from "./modules/preloader.js";
 import { switchContent } from "./modules/switchContent.js";
 import { trackVisit } from "./modules/firebase/analytics.js";

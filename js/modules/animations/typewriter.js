@@ -1,5 +1,5 @@
-import getLang from "../utils/lang.js";
-import I18N from "./i18n.js";
+import getLang from "../../utils/lang.js";
+import I18N from "../i18n.js";
 
 /* Animation écriture au clavier */
 let phrases = ["Hello wo... 🤭", "Hello, visitor! 😌"];
@@ -27,6 +27,9 @@ export const resetTypewriter = () => {
 
 // Déclenche la boucle de Typewriter
 export const startTypewriter = (cible = "phraseIntro") => {
+  let enVue = false;
+  let timeoutId;
+
   const texte = document.getElementById(cible);
   if (!texte) return;
 
@@ -57,7 +60,7 @@ export const startTypewriter = (cible = "phraseIntro") => {
       // On efface
       phraseCourant.pop();
 
-      // Pour le loading: arrête l'effacement
+      // Pour le preloader: arrête l'effacement
       if (firstIteration && cible === "greeting" && j === 6) {
         firstIteration = false;
         Efface = false;
@@ -74,9 +77,21 @@ export const startTypewriter = (cible = "phraseIntro") => {
     texte.innerHTML = phraseCourant.join("");
 
     const vitesse = j === phrase.length ? 2000 : Efface ? 50 : 100;
-    setTimeout(loop, vitesse);
+    timeoutId = setTimeout(loop, vitesse);
   };
-  loop();
+
+  const observer = new IntersectionObserver(([entry]) => {
+    const visible = entry.isIntersecting;
+    if (visible && !enVue) {
+      enVue = true;
+      loop();
+    } else if (!visible) {
+      enVue = false;
+      clearTimeout(timeoutId);
+    }
+  });
+
+  observer.observe(texte);
 };
 
 export const selectPhr = (phr) => {
