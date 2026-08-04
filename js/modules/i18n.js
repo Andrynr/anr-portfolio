@@ -51,7 +51,8 @@ const I18N = (function () {
     });
 
     // Choix du CV
-    root.querySelector("#cv")?.href = t("contact.cv");
+    const cvLink = root.querySelector("#cv");
+    if (cvLink) cvLink.href = t("contact.cv");
   }
 
   /* Gère le select pour langues */
