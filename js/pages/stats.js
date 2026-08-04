@@ -94,12 +94,12 @@ function renderVisitsTable(allVisits, container, page = 1, size = pageSize) {
   const prev = document.createElement("button");
   prev.type = "button";
   prev.className = "btn btn-sm btn-outline-primary me-2";
-  ((prev.textContent = "Préc."), (prev.disabled = current <= 1));
+  (prev.textContent = "Préc."), (prev.disabled = current <= 1);
 
   const next = document.createElement("button");
   next.type = "button";
   next.className = "btn btn-sm btn-outline-primary";
-  ((next.textContent = "Suiv."), (next.disabled = current >= totalPages));
+  (next.textContent = "Suiv."), (next.disabled = current >= totalPages);
 
   prev.addEventListener("click", () => {
     if (current > 1) {
@@ -126,14 +126,16 @@ function renderVisitsTable(allVisits, container, page = 1, size = pageSize) {
 
 // initial render
 requireAuth((user) =>
-  renderVisitsTable(visits, visitsElement, currentPage, pageSize),
+  renderVisitsTable(visits, visitsElement, currentPage, pageSize)
 );
 hideSpinner();
+
 // Bouton de déconnexion
 const logoutBtn = document.getElementById("logoutBtn");
 
-logoutBtn.addEventListener("click", async () => {
+logoutBtn?.addEventListener("click", async () => {
   spinner();
+
   try {
     await logOut();
   } catch (error) {

@@ -20,7 +20,8 @@ form.addEventListener("submit", async (e) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
 
-    window.location.href = "/pages/stats.html";
+    window.location.href =
+      "https://andrynr.github.io/anr-portfolio/pages/stats.html";
   } catch (error) {
     alert(error.message);
   } finally {
@@ -38,7 +39,8 @@ loginGgBtn.addEventListener("click", async () => {
   try {
     await signInWithPopup(auth, provider);
 
-    window.location.href = "/pages/stats.html";
+    window.location.href =
+      "https://andrynr.github.io/anr-portfolio/pages/merci.html";
   } catch (error) {
     console.log(error);
   } finally {
