@@ -40,7 +40,7 @@ loginGgBtn.addEventListener("click", async () => {
     await signInWithPopup(auth, provider);
 
     window.location.href =
-      "https://andrynr.github.io/anr-portfolio/pages/merci.html";
+      "https://andrynr.github.io/anr-portfolio/pages/stats.html";
   } catch (error) {
     console.log(error);
   } finally {

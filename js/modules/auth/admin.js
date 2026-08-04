@@ -7,7 +7,8 @@ import { auth } from "../firebase/firebase.js";
 export function requireAuth(callback) {
   onAuthStateChanged(auth, (user) => {
     if (!user) {
-      window.location.href = "/pages/login.html";
+      window.location.href =
+        "https://andrynr.github.io/anr-portfolio/pages/login.html";
       return;
     }
 
@@ -20,5 +21,6 @@ export function requireAuth(callback) {
 export const logOut = async () => {
   await signOut(auth);
 
-  window.location.href = "/pages/login.html";
+  window.location.href =
+    "https://andrynr.github.io/anr-portfolio/pages/login.html";
 };
